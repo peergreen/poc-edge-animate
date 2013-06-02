@@ -51,47 +51,47 @@ Symbol.bindElementAction(compId,symbolName,"${_l_h2}","mouseout",function(sym,e)
 //Edge binding end
 Symbol.bindElementAction(compId,symbolName,"${_b_pg-embedded}","click",function(sym,e){var profile=sym.getVariable("profile");if(profile=="unknown"){sym.$("b_pg-tomcat").fadeOut();sym.$("b_pg-was").fadeOut();sym.$("b_pg-kernel").fadeOut();sym.$("b_pg-osgi").fadeOut();sym.$("b_pg-user").fadeOut();sym.setVariable("profile","embedded");sym.$("ProfileDetail").html("</br>Peergreen Embedded Server</br>");sym.$("b_download").fadeIn();}});
 //Edge binding end
-Symbol.bindElementAction(compId,symbolName,"${_b_pg-embedded}","mouseover",function(sym,e){var e=sym.$("b_pg-embedded");e.width(e.width()*1.1).height(e.height()*1.1);sym.$("ProfileDesc").html("Peergreen Embedded server</br></br>provides a lightweight server for constrained environment.");});
+Symbol.bindElementAction(compId,symbolName,"${_b_pg-embedded}","mouseover",function(sym,e){var e=sym.$("b_pg-embedded");e.width(e.width()*1.2).height(e.height()*1.2);sym.$("ProfileDesc").html("Peergreen Embedded server</br></br>provides a lightweight server for constrained environment.");});
 //Edge binding end
-Symbol.bindElementAction(compId,symbolName,"${_b_pg-embedded}","mouseout",function(sym,e){var e=sym.$("b_pg-embedded");e.width(e.width()/1.1).height(e.height()/1.1);sym.$("ProfileDesc").html("");});
+Symbol.bindElementAction(compId,symbolName,"${_b_pg-embedded}","mouseout",function(sym,e){var e=sym.$("b_pg-embedded");e.width(e.width()/1.2).height(e.height()/1.2);sym.$("ProfileDesc").html("");});
 //Edge binding end
 Symbol.bindElementAction(compId,symbolName,"${_b_pg-tomcat}","click",function(sym,e){var profile=sym.getVariable("profile");if(profile=="unknown"){sym.$("p_tomcat").fadeIn();sym.$("b_pg-kernel").fadeOut();sym.$("b_pg-was").fadeOut();sym.$("b_pg-embedded").fadeOut();sym.$("b_pg-osgi").fadeOut();sym.$("b_pg-user").fadeOut();sym.setVariable("profile","tomcat");sym.$("ProfileDetail").html("</br>Peergreen Tomcat</br>");sym.$("b_download").fadeIn();}});
 //Edge binding end
-Symbol.bindElementAction(compId,symbolName,"${_b_pg-tomcat}","mouseover",function(sym,e){var e=sym.$("b_pg-tomcat");e.width(e.width()*1.1).height(e.height()*1.1);sym.$("ProfileDesc").html("Peergreen Tomcat</br></br>provides a Tomcat based web container");});
+Symbol.bindElementAction(compId,symbolName,"${_b_pg-tomcat}","mouseover",function(sym,e){var e=sym.$("b_pg-tomcat");e.width(e.width()*1.2).height(e.height()*1.2);sym.$("ProfileDesc").html("Peergreen Tomcat</br></br>provides a Tomcat based web container");});
 //Edge binding end
-Symbol.bindElementAction(compId,symbolName,"${_b_pg-tomcat}","mouseout",function(sym,e){var e=sym.$("b_pg-tomcat");e.width(e.width()/1.1).height(e.height()/1.1);sym.$("ProfileDesc").html("");});
+Symbol.bindElementAction(compId,symbolName,"${_b_pg-tomcat}","mouseout",function(sym,e){var e=sym.$("b_pg-tomcat");e.width(e.width()/1.2).height(e.height()/1.2);sym.$("ProfileDesc").html("");});
 //Edge binding end
 Symbol.bindElementAction(compId,symbolName,"${_b_pg-was}","click",function(sym,e){var profile=sym.getVariable("profile");if(profile=="unknown"){sym.$("p_tomcat").fadeIn();sym.$("p_jotm").fadeIn();sym.$("p_hibernate").fadeIn();sym.$("p_jersey").fadeIn();sym.$("p_easybeans").fadeIn();sym.$("p_h2").fadeIn();sym.$("p_jdbc").fadeIn();sym.$("p_jndi").fadeIn();sym.$("b_pg-tomcat").fadeOut();sym.$("b_pg-kernel").fadeOut();sym.$("b_pg-embedded").fadeOut();sym.$("b_pg-osgi").fadeOut();sym.$("b_pg-user").fadeOut();sym.setVariable("profile","was");sym.$("ProfileDetail").html("</br>Peergreen WAS</br>");sym.$("b_download").fadeIn();}});
 //Edge binding end
-Symbol.bindElementAction(compId,symbolName,"${_b_pg-was}","mouseover",function(sym,e){var e=sym.$("b_pg-was");e.width(e.width()*1.1).height(e.height()*1.1);sym.$("ProfileDesc").html("Peergreen WAS</br></br>provides a Java EE 6 web profile server.");});
+Symbol.bindElementAction(compId,symbolName,"${_b_pg-was}","mouseover",function(sym,e){var e=sym.$("b_pg-was");e.width(e.width()*1.2).height(e.height()*1.2);sym.$("ProfileDesc").html("Peergreen WAS</br></br>provides a Java EE 6 web profile server.");});
 //Edge binding end
-Symbol.bindElementAction(compId,symbolName,"${_b_pg-was}","mouseout",function(sym,e){var e=sym.$("b_pg-was");e.width(e.width()/1.1).height(e.height()/1.1);sym.$("ProfileDesc").html("");});
+Symbol.bindElementAction(compId,symbolName,"${_b_pg-was}","mouseout",function(sym,e){var e=sym.$("b_pg-was");e.width(e.width()/1.2).height(e.height()/1.2);sym.$("ProfileDesc").html("");});
 //Edge binding end
-Symbol.bindElementAction(compId,symbolName,"${_b_pg-user}","mouseover",function(sym,e){var e=sym.$("b_pg-user");e.width(e.width()*1.1).height(e.height()*1.1);sym.$("speech-alacarte").fadeIn();sym.$("ProfileDesc").html("Peergreen User Defined</br></br> provides 'A la carte' servers.");});
+Symbol.bindElementAction(compId,symbolName,"${_b_pg-user}","mouseover",function(sym,e){var e=sym.$("b_pg-user");e.width(e.width()*1.2).height(e.height()*1.2);sym.$("speech-alacarte").fadeIn();sym.$("ProfileDesc").html("Peergreen User Defined</br></br> provides 'A la carte' servers.");});
 //Edge binding end
-Symbol.bindElementAction(compId,symbolName,"${_b_pg-user}","mouseout",function(sym,e){var e=sym.$("b_pg-user");e.width(e.width()/1.1).height(e.height()/1.1);sym.$("speech-alacarte").fadeOut();sym.$("ProfileDesc").html("");});
+Symbol.bindElementAction(compId,symbolName,"${_b_pg-user}","mouseout",function(sym,e){var e=sym.$("b_pg-user");e.width(e.width()/1.2).height(e.height()/1.2);sym.$("speech-alacarte").fadeOut();sym.$("ProfileDesc").html("");});
 //Edge binding end
 Symbol.bindElementAction(compId,symbolName,"${_b_pg-kernel}","click",function(sym,e){var profile=sym.getVariable("profile");if(profile=="unknown"){sym.setVariable("profile","kernel");sym.$("ProfileDetail").html("</br>Peergreen Kernel</br>");sym.$("b_pg-tomcat").fadeOut();sym.$("b_pg-was").fadeOut();sym.$("b_pg-embedded").fadeOut();sym.$("b_pg-osgi").fadeOut();sym.$("b_pg-user").fadeOut();sym.$("b_download").fadeIn();}});
 //Edge binding end
-Symbol.bindElementAction(compId,symbolName,"${_b_pg-kernel}","mouseover",function(sym,e){var e=sym.$("b_pg-kernel");e.width(e.width()*1.1).height(e.height()*1.1);sym.$("ProfileDesc").html("Peergreen Kernel</br></br>provides a lightweight OSGi server.");});
+Symbol.bindElementAction(compId,symbolName,"${_b_pg-kernel}","mouseover",function(sym,e){var e=sym.$("b_pg-kernel");e.width(e.width()*1.2).height(e.height()*1.2);sym.$("ProfileDesc").html("Peergreen Kernel</br></br>provides a lightweight OSGi server.");});
 //Edge binding end
-Symbol.bindElementAction(compId,symbolName,"${_b_pg-kernel}","mouseout",function(sym,e){var e=sym.$("b_pg-kernel");e.width(e.width()/1.1).height(e.height()/1.1);sym.$("ProfileDesc").html("");});
+Symbol.bindElementAction(compId,symbolName,"${_b_pg-kernel}","mouseout",function(sym,e){var e=sym.$("b_pg-kernel");e.width(e.width()/1.2).height(e.height()/1.2);sym.$("ProfileDesc").html("");});
 //Edge binding end
-Symbol.bindElementAction(compId,symbolName,"${_b_pg-osgi}","click",function(sym,e){var profile=sym.getVariable("profile");if(profile=="unknown"){sym.$("p_tomcat").fadeIn();sym.$("p_jotm").fadeIn();sym.$("p_hibernate").fadeIn();sym.$("p_easybeans").fadeIn();sym.$("p_jndi").fadeIn();sym.$("b_pg-tomcat").fadeOut();sym.$("b_pg-was").fadeOut();sym.$("b_pg-embedded").fadeOut();sym.$("b_pg-kernel").fadeOut();sym.$("b_pg-user").fadeOut();sym.setVariable("profile","enterpriseosgi");sym.$("ProfileDetail").html("</br>Peergreen Enterprise OSGi</br>");sym.$("b_download").fadeIn();}});
+Symbol.bindElementAction(compId,symbolName,"${_b_pg-osgi}","click",function(sym,e){var profile=sym.getVariable("profile");if(profile=="unknown"){sym.$("p_tomcat").fadeIn();sym.$("p_jotm").fadeIn();sym.$("p_hibernate").fadeIn();sym.$("p_easybeans").fadeIn();sym.$("p_jndi").fadeIn();sym.$("p_aries").fadeIn();sym.$("b_pg-tomcat").fadeOut();sym.$("b_pg-was").fadeOut();sym.$("b_pg-embedded").fadeOut();sym.$("b_pg-kernel").fadeOut();sym.$("b_pg-user").fadeOut();sym.setVariable("profile","enterpriseosgi");sym.$("ProfileDetail").html("</br>Peergreen Enterprise OSGi</br>");sym.$("b_download").fadeIn();}});
 //Edge binding end
-Symbol.bindElementAction(compId,symbolName,"${_b_pg-osgi}","mouseover",function(sym,e){var e=sym.$("b_pg-osgi");e.width(e.width()*1.1).height(e.height()*1.1);sym.$("ProfileDesc").html("Peergreen Enterprise OSGi</br></br>provides an Enterprise OSGi server.");});
+Symbol.bindElementAction(compId,symbolName,"${_b_pg-osgi}","mouseover",function(sym,e){var e=sym.$("b_pg-osgi");e.width(e.width()*1.2).height(e.height()*1.2);sym.$("ProfileDesc").html("Peergreen Enterprise OSGi</br></br>provides an Enterprise OSGi server.");});
 //Edge binding end
-Symbol.bindElementAction(compId,symbolName,"${_b_pg-osgi}","mouseout",function(sym,e){var e=sym.$("b_pg-osgi");e.width(e.width()/1.1).height(e.height()/1.1);sym.$("ProfileDesc").html("");});
+Symbol.bindElementAction(compId,symbolName,"${_b_pg-osgi}","mouseout",function(sym,e){var e=sym.$("b_pg-osgi");e.width(e.width()/1.2).height(e.height()/1.2);sym.$("ProfileDesc").html("");});
 //Edge binding end
 Symbol.bindElementAction(compId,symbolName,"${_reset}","click",function(sym,e){sym.$("p_tomcat").fadeOut();sym.$("p_easybeans").fadeOut();sym.$("p_jotm").fadeOut();sym.$("p_hibernate").fadeOut();sym.$("p_jersey").fadeOut();sym.$("p_joram").fadeOut();sym.$("p_eclipselink").fadeOut();sym.$("p_h2").fadeOut();sym.$("p_derby").fadeOut();sym.$("p_jetty").fadeOut();sym.$("p_jdbc").fadeOut();sym.$("p_jndi").fadeOut();sym.$("p_aries").fadeOut();sym.$("l_tomcat").fadeIn();sym.$("l_jotm").fadeIn();sym.$("l_hibernate").fadeIn();sym.$("l_easybeans").fadeIn();sym.$("l_jersey").fadeIn();sym.$("l_h2").fadeIn();sym.$("l_jdbc").fadeIn();sym.$("l_jndi").fadeIn();sym.$("l_aries").fadeIn();sym.$("b_pg-kernel").fadeIn();sym.$("b_pg-tomcat").fadeIn();sym.$("b_pg-was").fadeIn();sym.$("b_pg-embedded").fadeIn();sym.$("b_pg-osgi").fadeIn();sym.$("b_pg-user").fadeIn();sym.setVariable("profile","unknown");sym.$("ProfileDetail").html("</br>Profile not selected yet");sym.$("b_download").fadeOut();});
 //Edge binding end
-Symbol.bindElementAction(compId,symbolName,"${_l_aries}","mouseover",function(sym,e){sym.$("FeatureDetail").html("Apache Aries</br>OSGi Sub Systems</br>Enterprise OSGi</br>");var e=sym.$("l_aries");e.width(e.width()*1.1).height(e.height()*1.1);});
+Symbol.bindElementAction(compId,symbolName,"${_l_aries}","mouseover",function(sym,e){sym.$("FeatureDetail").html("Apache Aries</br>OSGi Sub Systems</br>{Enterprise OSGi]</br>");var e=sym.$("l_aries");e.width(e.width()*1.1).height(e.height()*1.1);});
 //Edge binding end
 Symbol.bindElementAction(compId,symbolName,"${_l_aries}","click",function(sym,e){var profile=sym.getVariable("profile");if(profile=="unknown"){sym.$("b_pg-kernel").fadeOut();sym.$("b_pg-embedded").fadeOut();sym.$("b_pg-tomcat").fadeOut();sym.$("b_pg-was").fadeOut();sym.$("l_jersey").fadeOut();sym.$("p_aries").fadeIn();}});
 //Edge binding end
 Symbol.bindElementAction(compId,symbolName,"${_l_aries}","mouseout",function(sym,e){sym.$("FeatureDetail").html("");var e=sym.$("l_aries");e.width(e.width()/1.1).height(e.height()/1.1);});
 //Edge binding end
-Symbol.bindElementAction(compId,symbolName,"${_l_jndi}","mouseover",function(sym,e){sym.$("FeatureDetail").html("JNDI</br>JNDI Registry</br>");var e=sym.$("l_jndi");e.width(e.width()*1.1).height(e.height()*1.1);});
+Symbol.bindElementAction(compId,symbolName,"${_l_jndi}","mouseover",function(sym,e){sym.$("FeatureDetail").html("JNDI</br>JNDI Registry</br>[JNDI]");var e=sym.$("l_jndi");e.width(e.width()*1.1).height(e.height()*1.1);});
 //Edge binding end
 Symbol.bindElementAction(compId,symbolName,"${_l_jndi}","click",function(sym,e){var profile=sym.getVariable("profile");if(profile=="unknown"){sym.$("b_pg-kernel").fadeOut();sym.$("b_pg-embedded").fadeOut();sym.$("b_pg-tomcat").fadeOut();sym.$("p_jndi").fadeIn();}});
 //Edge binding end

@@ -403,7 +403,7 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // alias pour les clas
 
       Symbol.bindElementAction(compId, symbolName, "${_b_pg-embedded}", "mouseover", function(sym, e) {
          var e = sym.$("b_pg-embedded");
-         e.width(e.width()*1.1).height(e.height()*1.1);
+         e.width(e.width()*1.2).height(e.height()*1.2);
          sym.$("ProfileDesc").html("Peergreen Embedded server</br></br>provides a lightweight server for constrained environment.");
          
          
@@ -413,7 +413,7 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // alias pour les clas
 
       Symbol.bindElementAction(compId, symbolName, "${_b_pg-embedded}", "mouseout", function(sym, e) {
          var e = sym.$("b_pg-embedded");
-         e.width(e.width()/1.1).height(e.height()/1.1);
+         e.width(e.width()/1.2).height(e.height()/1.2);
          sym.$("ProfileDesc").html("");
          
          
@@ -444,7 +444,7 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // alias pour les clas
 
       Symbol.bindElementAction(compId, symbolName, "${_b_pg-tomcat}", "mouseover", function(sym, e) {
          var e = sym.$("b_pg-tomcat");
-         e.width(e.width()*1.1).height(e.height()*1.1);
+         e.width(e.width()*1.2).height(e.height()*1.2);
          sym.$("ProfileDesc").html("Peergreen Tomcat</br></br>provides a Tomcat based web container");
          
          
@@ -454,7 +454,7 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // alias pour les clas
 
       Symbol.bindElementAction(compId, symbolName, "${_b_pg-tomcat}", "mouseout", function(sym, e) {
          var e = sym.$("b_pg-tomcat");
-         e.width(e.width()/1.1).height(e.height()/1.1);
+         e.width(e.width()/1.2).height(e.height()/1.2);
          sym.$("ProfileDesc").html("");
          
          
@@ -492,7 +492,7 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // alias pour les clas
 
       Symbol.bindElementAction(compId, symbolName, "${_b_pg-was}", "mouseover", function(sym, e) {
          var e = sym.$("b_pg-was");
-         e.width(e.width()*1.1).height(e.height()*1.1);
+         e.width(e.width()*1.2).height(e.height()*1.2);
          sym.$("ProfileDesc").html("Peergreen WAS</br></br>provides a Java EE 6 web profile server.");
          
 
@@ -501,7 +501,7 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // alias pour les clas
 
       Symbol.bindElementAction(compId, symbolName, "${_b_pg-was}", "mouseout", function(sym, e) {
          var e = sym.$("b_pg-was");
-         e.width(e.width()/1.1).height(e.height()/1.1);
+         e.width(e.width()/1.2).height(e.height()/1.2);
          sym.$("ProfileDesc").html("");
          
          
@@ -513,7 +513,7 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // alias pour les clas
 
       Symbol.bindElementAction(compId, symbolName, "${_b_pg-user}", "mouseover", function(sym, e) {
          var e = sym.$("b_pg-user");
-         e.width(e.width()*1.1).height(e.height()*1.1);
+         e.width(e.width()*1.2).height(e.height()*1.2);
          sym.$("speech-alacarte").fadeIn();
          sym.$("ProfileDesc").html("Peergreen User Defined</br></br> provides 'A la carte' servers.");
          
@@ -524,7 +524,7 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // alias pour les clas
 
       Symbol.bindElementAction(compId, symbolName, "${_b_pg-user}", "mouseout", function(sym, e) {
          var e = sym.$("b_pg-user");
-         e.width(e.width()/1.1).height(e.height()/1.1);
+         e.width(e.width()/1.2).height(e.height()/1.2);
          sym.$("speech-alacarte").fadeOut();
          
          sym.$("ProfileDesc").html("");
@@ -554,7 +554,7 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // alias pour les clas
 
       Symbol.bindElementAction(compId, symbolName, "${_b_pg-kernel}", "mouseover", function(sym, e) {
          var e = sym.$("b_pg-kernel");
-         e.width(e.width()*1.1).height(e.height()*1.1);
+         e.width(e.width()*1.2).height(e.height()*1.2);
          sym.$("ProfileDesc").html("Peergreen Kernel</br></br>provides a lightweight OSGi server.");
          
          
@@ -564,7 +564,7 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // alias pour les clas
 
       Symbol.bindElementAction(compId, symbolName, "${_b_pg-kernel}", "mouseout", function(sym, e) {
          var e = sym.$("b_pg-kernel");
-         e.width(e.width()/1.1).height(e.height()/1.1);
+         e.width(e.width()/1.2).height(e.height()/1.2);
          sym.$("ProfileDesc").html("");
          
          
@@ -580,6 +580,7 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // alias pour les clas
          	sym.$("p_hibernate").fadeIn();
          	sym.$("p_easybeans").fadeIn();
          	sym.$("p_jndi").fadeIn();
+         	sym.$("p_aries").fadeIn();
          
          	sym.$("b_pg-tomcat").fadeOut();
          	sym.$("b_pg-was").fadeOut();
@@ -597,7 +598,7 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // alias pour les clas
 
       Symbol.bindElementAction(compId, symbolName, "${_b_pg-osgi}", "mouseover", function(sym, e) {
          var e = sym.$("b_pg-osgi");
-         e.width(e.width()*1.1).height(e.height()*1.1);
+         e.width(e.width()*1.2).height(e.height()*1.2);
          sym.$("ProfileDesc").html("Peergreen Enterprise OSGi</br></br>provides an Enterprise OSGi server.");
          
          
@@ -607,7 +608,7 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // alias pour les clas
 
       Symbol.bindElementAction(compId, symbolName, "${_b_pg-osgi}", "mouseout", function(sym, e) {
          var e = sym.$("b_pg-osgi");
-         e.width(e.width()/1.1).height(e.height()/1.1);
+         e.width(e.width()/1.2).height(e.height()/1.2);
          sym.$("ProfileDesc").html("");
          
          
