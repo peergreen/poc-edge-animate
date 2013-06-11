@@ -13,7 +13,7 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // alias pour les clas
    (function(symbolName) {
       
       
-      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 30105, function(sym, e) {
+      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 44994, function(sym, e) {
          // lire le scénario à partir de la position spécifiée (ms ou étiquette)
          //sym.play("start");
 
