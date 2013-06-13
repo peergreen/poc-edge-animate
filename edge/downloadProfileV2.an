@@ -21,7 +21,7 @@
    }}\
 }",
 	"pref__general__codeView":"sectionalView",
-	"viewStartMs":"-14.762624466572",
+	"viewStartMs":"2089.8012695313",
 	"StageZoomFactor":"100",
 	"Niveau inférieur-Default Timeline_playhead_ms":"0",
 	"pref__general__AutoKeyframePropertiesArmed":"false",
@@ -56,7 +56,7 @@
 			"invisible":"false"},
 		"element_${_p_jotm}":{
 			"invisible":"false"}},
-	"TransitionIdCounter":"73",
+	"TransitionIdCounter":"109",
 	"CompZoomFactor":"100",
 	"viewStartY":"0",
 	"colorSwatches":"rgba(192,192,192,0.00)",
@@ -70,5 +70,5 @@
 		"defaultStageParentHeight":"528px",
 		"dummyStageParentWidth":"1374px",
 		"dummyStageParentHeight":"528px"},
-	"stage-Default Timeline_playhead_ms":"0",
+	"stage-Default Timeline_playhead_ms":"3000",
 	"PreloaderType":"Polite"}

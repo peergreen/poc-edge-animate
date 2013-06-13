@@ -13,7 +13,7 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // alias pour les clas
    //Edge symbol: 'stage'
    (function(symbolName) {
       
-      var draw = function($symbol, $profile) {
+  	var draw = function($symbol, $profile) {
       	var sym = $symbol;
          sym.$("p_jdbc").fadeOut();
          sym.$("p_easybeans").fadeOut();
@@ -29,63 +29,80 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // alias pour les clas
 		};
 
       Symbol.bindElementAction(compId, symbolName, "body > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > ul:nth-child(1) > li:nth-child(1) > a:nth-child(1)", "click", function(sym, e) {
-         sym.setVariable("selected", "kernel");
-
-         sym.$("product_box").empty();
-         sym.$("product_box").append('<img src="images/box_kernel.png"/>');
-
-         sym.$("download").empty();
-         sym.$("download").append('<img src="images/download.png"/>');
-
-         sym.$("profile_desc").html("<b>Peergreen Kernel</b><br /><br />provides a lightweight OSGi server.");
+         var isBusy = sym.getVariable("busy");
+         if (isBusy == "false") {
+              
+            sym.setVariable("selected", "kernel");
+         
+         	sym.$("product_box").empty();
+         	sym.$("product_box").append('<img src="images/box_kernel.png"/>');
+         
+         	sym.$("download").empty();
+         	sym.$("download").append('<img src="images/download.png"/>');
+         
+         	sym.$("profile_desc").html("<b>Peergreen Kernel</b><br /><br />provides a lightweight OSGi server.");
+          }
 
       });
       //Edge binding end
 
       Symbol.bindElementAction(compId, symbolName, "body > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > ul:nth-child(1) > li:nth-child(2) > a:nth-child(1)", "click", function(sym, e) {
-         sym.setVariable("selected", "tomcat");
-
-         sym.$("product_box").empty();
-         sym.$("product_box").append('<img src="images/box_tomcat.png"/>');
-
-         sym.$("download").empty();
-         sym.$("download").append('<img src="images/download.png"/>');
-
-         sym.$("profile_desc").html("<b>Peergreen Tomcat</b><br/><br/>provides a Tomcat based web container.");
+         var isBusy = sym.getVariable("busy");
+         if (isBusy == "false") {
+              sym.setVariable("selected", "tomcat");
+         
+         	sym.$("product_box").empty();
+         	sym.$("product_box").append('<img src="images/box_tomcat.png"/>');
+         
+         	sym.$("download").empty();
+         	sym.$("download").append('<img src="images/download.png"/>');
+         
+         	sym.$("profile_desc").html("<b>Peergreen Tomcat</b><br/><br/>provides a Tomcat based web container.");
+         }
 
       });
       //Edge binding end
 
       Symbol.bindElementAction(compId, symbolName, "body > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > ul:nth-child(1) > li:nth-child(3) > a:nth-child(1)", "click", function(sym, e) {
-         sym.setVariable("selected", "was");
-
-         sym.$("product_box").empty();
-         sym.$("product_box").append('<img src="images/box_was.png"/>');
-
-         sym.$("download").empty();
-         sym.$("download").append('<img src="images/download.png"/>');
-
-         sym.$("profile_desc").html("<b>Peergreen WAS</b> <br /><br />provides a Java EE web profile server.");
+         var isBusy = sym.getVariable("busy");
+         if (isBusy == "false") {
+              sym.setVariable("selected", "was");
+         
+         	sym.$("product_box").empty();
+         	sym.$("product_box").append('<img src="images/box_was.png"/>');
+         
+         	sym.$("download").empty();
+         	sym.$("download").append('<img src="images/download.png"/>');
+         
+         	sym.$("profile_desc").html("<b>Peergreen WAS</b> <br /><br />provides a Java EE web profile server.");
+         }
 
       });
       //Edge binding end
 
       Symbol.bindElementAction(compId, symbolName, "body > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > ul:nth-child(1) > li:nth-child(4) > a:nth-child(1)", "click", function(sym, e) {
-         sym.setVariable("selected", "osgi");
-
-         sym.$("product_box").empty();
-         sym.$("product_box").append('<img src="images/box_osgi.png"/>');
-
-         sym.$("download").empty();
-         sym.$("download").append('<img src="images/download.png"/>');
-
-         sym.$("profile_desc").html("<b>Peergreen Enterprise OSGi</b><br /><br />provides an Enterprise OSGi server.");
+         var isBusy = sym.getVariable("busy");
+         if (isBusy == "false") {
+              sym.setVariable("selected", "osgi");
+         
+         	sym.$("product_box").empty();
+         	sym.$("product_box").append('<img src="images/box_osgi.png"/>');
+         
+         	sym.$("download").empty();
+         	sym.$("download").append('<img src="images/download.png"/>');
+         
+         	sym.$("profile_desc").html("<b>Peergreen Enterprise OSGi</b><br /><br />provides an Enterprise OSGi server.");
+         }
 
       });
       //Edge binding end
 
       Symbol.bindElementAction(compId, symbolName, "${_download}", "click", function(sym, e) {
-         sym.play("play");
+         var isBusy = sym.getVariable("busy");
+         if (isBusy == "false") {
+         	sym.play("play");
+         	sym.setVariable("busy", "true");
+         }
 
       });
       //Edge binding end
@@ -101,33 +118,47 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // alias pour les clas
 
 
       Symbol.bindElementAction(compId, symbolName, "body > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > ul:nth-child(1) > li:nth-child(1) > a:nth-child(1)", "mouseenter", function(sym, e) {
-         draw(sym, "kernel");
+         var isBusy = sym.getVariable("busy");
+         if (isBusy == "false") {
+         	draw(sym, "kernel");
+         }
 
       });
       //Edge binding end
 
       Symbol.bindElementAction(compId, symbolName, "body > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > ul:nth-child(1) > li:nth-child(2) > a:nth-child(1)", "mouseenter", function(sym, e) {
-         draw(sym, "tomcat");
-
-
+         var isBusy = sym.getVariable("busy");
+         if (isBusy == "false") {
+         	draw(sym, "tomcat");
+         }
+         
 
       });
       //Edge binding end
 
       Symbol.bindElementAction(compId, symbolName, "body > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > ul:nth-child(1) > li:nth-child(3) > a:nth-child(1)", "mouseenter", function(sym, e) {
-         draw(sym, "was");
+         var isBusy = sym.getVariable("busy");
+         if (isBusy == "false") {
+         	draw(sym, "was");
+         }
 
       });
       //Edge binding end
 
       Symbol.bindElementAction(compId, symbolName, "body > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > ul:nth-child(1) > li:nth-child(4) > a:nth-child(1)", "mouseenter", function(sym, e) {
-         draw(sym, "osgi");
+         var isBusy = sym.getVariable("busy");
+         if (isBusy == "false") {
+         	draw(sym, "osgi");
+         }
 
       });
       //Edge binding end
 
       Symbol.bindElementAction(compId, symbolName, "body > div:nth-child(1) > div:nth-child(1) > div:nth-child(1)", "mouseleave", function(sym, e) {
-         draw(sym, sym.getVariable("selected"));
+         var isBusy = sym.getVariable("busy");
+         if (isBusy == "false") {
+         	draw(sym, sym.getVariable("selected"));
+         }
 
       });
       //Edge binding end
@@ -149,20 +180,24 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // alias pour les clas
       Symbol.bindElementAction(compId, symbolName, "document", "compositionReady", function(sym, e) {
          draw(sym, "tomcat");
          sym.setVariable("selected", "tomcat");
-
+         
          sym.$("product_box").empty();
          sym.$("product_box").append('<img src="images/box_tomcat.png"/>');
-
+         
          sym.$("download").empty();
          sym.$("download").append('<img src="images/download.png"/>');
-
+         
          sym.$("profile_desc").html("<b>Peergreen Tomcat</b><br/><br/>provides a Tomcat based web container.");
+         
+         sym.setVariable("busy", "false");
 
       });
       //Edge binding end
 
-      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 2000, function(sym, e) {
+      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 3000, function(sym, e) {
          sym.stop();
+         sym.setVariable("busy", "false");
+         
          // insérer le code ici
 
       });
