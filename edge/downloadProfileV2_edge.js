@@ -72,21 +72,18 @@ var symbols = {
                id:'p_aries',
                type:'image',
                rect:['1px','43px','127px','100px','auto','auto'],
-               overflow:'hidden',
                fill:["rgba(0,0,0,0)",im+"p_aries2.png",'0px','0px']
             },
             {
                id:'p_jndi',
                type:'image',
                rect:['147px','42px','127px','100px','auto','auto'],
-               overflow:'hidden',
                fill:["rgba(0,0,0,0)",im+"p_jndi2.png",'0px','0px']
             },
             {
                id:'p_tomcat',
                type:'image',
                rect:['43px','0px','100px','127px','auto','auto'],
-               overflow:'hidden',
                fill:["rgba(0,0,0,0)",im+"p_tomcat2.png",'0px','0px']
             }]
          },
@@ -124,10 +121,9 @@ var symbols = {
             ["style", "top", '146px'],
             ["style", "left", '132px']
          ],
-         "${_p_tomcat}": [
-            ["style", "top", '0px'],
-            ["style", "left", '43px'],
-            ["style", "overflow", 'hidden']
+         "${_product_box}": [
+            ["color", "background-color", 'rgba(192,192,192,0)'],
+            ["style", "opacity", '1']
          ],
          "${_profile_desc}": [
             ["style", "left", '283px'],
@@ -153,23 +149,24 @@ var symbols = {
             ["style", "left", '147px'],
             ["style", "overflow", 'hidden']
          ],
-         "${_product_box}": [
-            ["color", "background-color", 'rgba(192,192,192,0)'],
-            ["style", "opacity", '1']
+         "${_p_aries}": [
+            ["style", "top", '43px'],
+            ["style", "left", '1px'],
+            ["style", "overflow", 'hidden']
          ],
          "${_Daisy}": [
             ["style", "top", '5.59%'],
-            ["style", "-webkit-transform-origin", [50,50], {valueTemplate:'@@0@@% @@1@@%'} ],
-            ["style", "-moz-transform-origin", [50,50],{valueTemplate:'@@0@@% @@1@@%'}],
-            ["style", "-ms-transform-origin", [50,50],{valueTemplate:'@@0@@% @@1@@%'}],
-            ["style", "msTransformOrigin", [50,50],{valueTemplate:'@@0@@% @@1@@%'}],
-            ["style", "-o-transform-origin", [50,50],{valueTemplate:'@@0@@% @@1@@%'}],
+            ["style", "display", 'block'],
             ["transform", "scaleY", '1'],
             ["transform", "rotateZ", '720deg'],
             ["transform", "scaleX", '1'],
             ["style", "right", '24.48%'],
             ["style", "left", 'auto'],
-            ["style", "display", 'block']
+            ["style", "-webkit-transform-origin", [50,50], {valueTemplate:'@@0@@% @@1@@%'} ],
+            ["style", "-moz-transform-origin", [50,50],{valueTemplate:'@@0@@% @@1@@%'}],
+            ["style", "-ms-transform-origin", [50,50],{valueTemplate:'@@0@@% @@1@@%'}],
+            ["style", "msTransformOrigin", [50,50],{valueTemplate:'@@0@@% @@1@@%'}],
+            ["style", "-o-transform-origin", [50,50],{valueTemplate:'@@0@@% @@1@@%'}]
          ],
          "${_p_easybeans}": [
             ["style", "top", '148px'],
@@ -190,9 +187,9 @@ var symbols = {
             ["style", "top", '129px'],
             ["style", "left", '147px']
          ],
-         "${_p_aries}": [
-            ["style", "top", '43px'],
-            ["style", "left", '1px'],
+         "${_p_tomcat}": [
+            ["style", "top", '0px'],
+            ["style", "left", '43px'],
             ["style", "overflow", 'hidden']
          ]
       }
@@ -208,10 +205,10 @@ var symbols = {
          },
          timeline: [
             { id: "eid10", tween: [ "style", "${_Daisy}", "-webkit-transform-origin", [50,50], { valueTemplate: '@@0@@% @@1@@%', fromValue: [50,50]}], position: 0, duration: 0 },
-            { id: "eid73", tween: [ "style", "${_Daisy}", "-moz-transform-origin", [50,50], { valueTemplate: '@@0@@% @@1@@%', fromValue: [50,50]}], position: 0, duration: 0 },
-            { id: "eid74", tween: [ "style", "${_Daisy}", "-ms-transform-origin", [50,50], { valueTemplate: '@@0@@% @@1@@%', fromValue: [50,50]}], position: 0, duration: 0 },
-            { id: "eid75", tween: [ "style", "${_Daisy}", "msTransformOrigin", [50,50], { valueTemplate: '@@0@@% @@1@@%', fromValue: [50,50]}], position: 0, duration: 0 },
-            { id: "eid76", tween: [ "style", "${_Daisy}", "-o-transform-origin", [50,50], { valueTemplate: '@@0@@% @@1@@%', fromValue: [50,50]}], position: 0, duration: 0 },
+            { id: "eid77", tween: [ "style", "${_Daisy}", "-moz-transform-origin", [50,50], { valueTemplate: '@@0@@% @@1@@%', fromValue: [50,50]}], position: 0, duration: 0 },
+            { id: "eid78", tween: [ "style", "${_Daisy}", "-ms-transform-origin", [50,50], { valueTemplate: '@@0@@% @@1@@%', fromValue: [50,50]}], position: 0, duration: 0 },
+            { id: "eid79", tween: [ "style", "${_Daisy}", "msTransformOrigin", [50,50], { valueTemplate: '@@0@@% @@1@@%', fromValue: [50,50]}], position: 0, duration: 0 },
+            { id: "eid80", tween: [ "style", "${_Daisy}", "-o-transform-origin", [50,50], { valueTemplate: '@@0@@% @@1@@%', fromValue: [50,50]}], position: 0, duration: 0 },
             { id: "eid8", tween: [ "transform", "${_Daisy}", "rotateZ", '720deg', { fromValue: '720deg'}], position: 261, duration: 0 },
             { id: "eid1", tween: [ "style", "${_Daisy}", "display", 'block', { fromValue: 'block'}], position: 0, duration: 0 }         ]
       }
