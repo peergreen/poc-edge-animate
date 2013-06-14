@@ -1,33 +1,17 @@
 <!DOCTYPE html>
 <html>
 	<head>
+		<link xmlns="http://www.w3.org/1999/xhtml" href="http://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css" />
 		<link href="http://site-dev-tests.peergreen.com/skin/skins/lyrebird/lib/bootstrap/css/bootstrap.css" rel="stylesheet">
     	<link href="http://site-dev-tests.peergreen.com/skin/skins/lyrebird/lib/bootstrap/css/bootstrap%2Dresponsive.css" rel="stylesheet">
     	<link href="http://site-dev-tests.peergreen.com/download/XWiki/DefaultSkin/doc.css" rel="stylesheet"/>
     	<script src="http://site-dev-tests.peergreen.com/skins/lyrebird/lib/bootstrap/js/jquery.js"></script>    	
 		<script src="http://site-dev-tests.peergreen.com/skins/lyrebird/lib/bootstrap/js/bootstrap.js"></script>
-		
-		<script >
-			jQuery(function($) {	
-				$('.button').click(function() {
-				    $('.profiles').removeClass('active');
-				    $('.profiles').find('img').stop().animate({ opacity: 0.2 });
-					$(this).parent().addClass('active');
-					$(this).find('img').stop().animate({ opacity: 1 });
-				});
-				$('.profiles').hover(
-					function () {
-						$(this).find('img').stop().animate({ opacity: 1 });
-					},
-					function () {
-						if (!$(this).hasClass('active')) {
-							$(this).find('img').stop().animate({ opacity: 0.2 });
-						}
-					}
-				);
-				$('#tomcat').click();
-			})(jQuery);	
-		</script>
+		<style>
+			#box, #desc, #btnDownload {
+				font-family : 'Lato';
+			}
+		</style>
 
 <!--Adobe Edge Runtime-->
     <script type="text/javascript" charset="utf-8" src="downloadProfileV2_edgePreload.js"></script>
@@ -39,26 +23,30 @@
 
 </head>
 	
-	<body>
+	<body style="width:850px">
 	<div class="container-fluid">
- <div class="row-fluid">
-  <div class="span3 bs-docs-sidebar">
-   <ul class="nav nav-list bs-docs-sidenav" style="width:100%">
-     <li class="profiles"><a class="button" href="#"><div class="row-fluid"><div class="span3"><img src="images/kernel-infini-logo.png" style="height:30px;opacity:0.2"/></div>Kernel</div></a></li>
-     <li class="profiles"><a id="tomcat" class="button" href="#"><div class="row-fluid"><div class="span3"><img src="images/logo_tomcat.png" style="height:30px;opacity:0.2"/></div>Tomcat</div></a></li>
-     <li class="profiles"><a class="button" href="#"><div class="row-fluid"><div class="span3"><img src="images/logo_was.png" style="height:30px;opacity:0.2"/></div>Web Application Server</div></a></li>
-     <li class="profiles"><a class="button" href="#"><div class="row-fluid"><div class="span3"><img src="images/logo_osgi.png" style="height:30px;opacity:0.2"/></div>Enterprise OSGi Server</div></a></li>
-   </ul>
-  </div>
-  </div>
-  
-  <div class="row-fluid" style="padding-top:60px">
-  	<div class="span12">
-  		<div class="hero-unit" style="height:60px">
-  			
+ 		<div class="row-fluid">
+  			<div class="span5 bs-docs-sidebar">
+   				<ul class="nav nav-list bs-docs-sidenav" style="width:100%">
+     				<li id="kernel_profile" class="profiles"><a class="button" href="#"><div class="row-fluid"><div class="span3"><img src="images/kernel-infini-logo.png" style="width:32px;opacity:0.2"/></div><div class="profile_title">Kernel</div></div></a></li>
+     				<li id="tomcat_profile" class="profiles"><a class="button" href="#"><div class="row-fluid"><div class="span3"><img src="images/logo_tomcat.png" style="width:32px;opacity:0.2"/></div><div class="profile_title">Tomcat</div></div></a></li>
+     				<li id="was_profile" class="profiles"><a class="button" href="#"><div class="row-fluid"><div class="span3"><img src="images/logo_was.png" style="width:32px;opacity:0.2"/></div><div class="profile_title">Web Application Server</div></div></a></li>
+     				<li id="osgi_profile" class="profiles"><a class="button" href="#"><div class="row-fluid"><div class="span3"><img src="images/osgi_logo.png" style="width:32px;opacity:0.2"/></div><div class="profile_title">Enterprise OSGi Server</div></div></a></li>
+   				</ul>
+  			</div>
   		</div>
   	</div>
-  </div>	
-  </div>
+  	<div class="container-fluid" style="padding-top:70px">
+  		<div class="well">
+  			<div class="row-fluid">
+  				<div id="box" class="span2"	>
+	  			</div>
+  				<div id="desc" class="span8" style="padding-left:10px">
+  				</div>
+  				<div id="btnDownload" class="span2 edgeLoad-EDGE-634258009">
+  				</div>
+  			</div>
+  		</div>	
+  	</div>	
 	</body>	
 </html>

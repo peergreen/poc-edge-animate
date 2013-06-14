@@ -17,17 +17,25 @@
    }},\
 \"Niveau inférieur\": {\
    \"timelines\": {\
-\
+      \"Default Timeline\": {\
+            \"ElementKeyframes\": {\
+                \"${symbolSelector}\": []\
+            }\
+      }\
    }}\
 }",
 	"pref__general__codeView":"sectionalView",
-	"viewStartMs":"2089.8012695313",
-	"StageZoomFactor":"100",
+	"pref__general__TimelineShowGrid":"true",
+	"stage-Default Timeline_playhead_ms":"2086",
 	"Niveau inférieur-Default Timeline_playhead_ms":"0",
 	"pref__general__AutoKeyframePropertiesArmed":"false",
-	"pixelsPerMs":"0.33869316470942",
+	"usedBOM":"false",
 	"symbol_stage":{
+		"element_${_p_jotm}":{
+			"invisible":"false"},
 		"element_${_p_jndi}":{
+			"invisible":"false"},
+		"element_${_p_tomcat}":{
 			"invisible":"false"},
 		"element_${_p_h2}":{
 			"invisible":"false"},
@@ -48,27 +56,29 @@
 			"timelineTreeOpened":"true",
 			"animationEnabled":"true",
 			"invisible":"false"},
-		"element_${_p_tomcat}":{
-			"invisible":"false"},
-		"element_${_p_hibernate}":{
-			"invisible":"false"},
 		"element_${_p_jersey}":{
 			"invisible":"false"},
-		"element_${_p_jotm}":{
-			"invisible":"false"}},
-	"TransitionIdCounter":"109",
+		"element_${_product_box}":{
+			"animationEnabled":"false"},
+		"element_${_p_hibernate}":{
+			"invisible":"false"},
+		"element_${_profile_desc}":{
+			"animationEnabled":"false"},
+		"element_${_download}":{
+			"animationEnabled":"false"}},
+	"TransitionIdCounter":"1342",
 	"CompZoomFactor":"100",
 	"viewStartY":"0",
 	"colorSwatches":"rgba(192,192,192,0.00)",
+	"PreloaderType":"Polite",
+	"ShowRulers":"false",
 	"stage-Default Timeline_mark_ms":"-1",
-	"pref__general__GenerateSmoothTransitions":"true",
-	"usedBOM":"false",
 	"nextElementColorIndex":"3",
-	"pref__general__TimelineShowGrid":"true",
+	"pref__general__GenerateSmoothTransitions":"true",
 	"symbol_Niveau inférieur":{
 		"defaultStageParentWidth":"1374px",
 		"defaultStageParentHeight":"528px",
 		"dummyStageParentWidth":"1374px",
 		"dummyStageParentHeight":"528px"},
-	"stage-Default Timeline_playhead_ms":"3000",
-	"PreloaderType":"Polite"}
+	"StageZoomFactor":"100",
+	"pixelsPerMs":"0.33869316470942"}
