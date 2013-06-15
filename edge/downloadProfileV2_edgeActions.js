@@ -76,16 +76,16 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // alias pour les clas
 		};
 
 
-      Symbol.bindElementAction(compId, symbolName, "body > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > ul:nth-child(1) > li:nth-child(1) > a:nth-child(1)", "click", function(sym, e) {
+      Symbol.bindElementAction(compId, symbolName, "${_kernel_profile}", "click", function(sym, e) {
          var isBusy = sym.getVariable("busy");
          if (isBusy == "false") {
          	var url = "https://forge.peergreen.com/repository/content/repositories/releases/com/peergreen/community/peergreen-server-light/1.0.0-M1/peergreen-server-light-1.0.0-M1.jar";
          	var desc = '<h2>Peergreen Kernel </h2>';
          	desc += 'Provides a lightweight OSGi server.';	
-         
+
          	sym.setVariable("selected", "kernel");
          	sym.setVariable("downloadURL", url);
-         
+
          	draw(sym, "kernel");
          	selectProfile(sym, desc, "3,2");
           }
@@ -93,16 +93,16 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // alias pour les clas
       });
       //Edge binding end
 
-      Symbol.bindElementAction(compId, symbolName, "body > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > ul:nth-child(1) > li:nth-child(2) > a:nth-child(1)", "click", function(sym, e) {
+      Symbol.bindElementAction(compId, symbolName, "${_tomcat_profile}", "click", function(sym, e) {
          var isBusy = sym.getVariable("busy");
          if (isBusy == "false") {
          	var url = "https://forge.peergreen.com/repository/content/repositories/releases/com/peergreen/community/peergreen-server-light/1.0.0-M1/peergreen-server-light-1.0.0-M1.jar";
          	var desc = "<h2>Peergreen Tomcat</h2>";
          	desc +="Tomcat : web container [Servlet 3.0, JSP 2.2]";
-         
+
          	sym.setVariable("selected", "tomcat");
             sym.setVariable("downloadURL", url);
-         
+
          	draw(sym, "tomcat");
          	selectProfile(sym, desc, "4");
          }
@@ -110,7 +110,7 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // alias pour les clas
       });
       //Edge binding end
 
-      Symbol.bindElementAction(compId, symbolName, "body > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > ul:nth-child(1) > li:nth-child(3) > a:nth-child(1)", "click", function(sym, e) {
+      Symbol.bindElementAction(compId, symbolName, "${_was_profile}", "click", function(sym, e) {
          var isBusy = sym.getVariable("busy");
          if (isBusy == "false") {
          	var url = "https://forge.peergreen.com/repository/content/repositories/releases/com/peergreen/community/peergreen-server-light/1.0.0-M1/peergreen-server-light-1.0.0-M1.jar";
@@ -120,10 +120,10 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // alias pour les clas
          	desc +="<br/>Jersey : RESTful Web service [JAX-RS 2.0]";
          	desc +="<br/>H2 : java database ";
          	desc +="<br/>Hibernate : persistence layer [JPA 2.0]";
-         
+
          	sym.setVariable("selected", "was");
             sym.setVariable("downloadURL", url);
-         
+
             draw(sym, "was");
          	selectProfile(sym, desc, "5,1");
          }
@@ -131,7 +131,7 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // alias pour les clas
       });
       //Edge binding end
 
-      Symbol.bindElementAction(compId, symbolName, "body > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > ul:nth-child(1) > li:nth-child(4) > a:nth-child(1)", "click", function(sym, e) {
+      Symbol.bindElementAction(compId, symbolName, "${_osgi_profile}", "click", function(sym, e) {
          var isBusy = sym.getVariable("busy");
          if (isBusy == "false") {
          	var url = "https://forge.peergreen.com/repository/content/repositories/releases/com/peergreen/community/peergreen-server-light/1.0.0-M1/peergreen-server-light-1.0.0-M1.jar";
@@ -141,10 +141,10 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // alias pour les clas
          	desc += "<br />JOTM: transaction manager [JTA 1.1]";
          	desc += "<br />JNDI : Registry [Enterprise OSGi JNDI service]";
          	desc += "<br />Hibernate : persistence layer [JPA 2.0]";
-         
+
          	sym.setVariable("selected", "osgi");
             sym.setVariable("downloadURL", url);
-         
+
          	draw(sym, "osgi");
          	selectProfile(sym, desc, "4,9");
          }
@@ -164,7 +164,7 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // alias pour les clas
 
 
 
-      Symbol.bindElementAction(compId, symbolName, "body > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > ul:nth-child(1) > li:nth-child(1) > a:nth-child(1)", "mouseenter", function(sym, e) {
+      Symbol.bindElementAction(compId, symbolName, "${_kernel_profile}", "mouseenter", function(sym, e) {
          var isBusy = sym.getVariable("busy");
          if (isBusy == "false") {
          	//draw(sym, "kernel");
@@ -173,7 +173,7 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // alias pour les clas
       });
       //Edge binding end
 
-      Symbol.bindElementAction(compId, symbolName, "body > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > ul:nth-child(1) > li:nth-child(2) > a:nth-child(1)", "mouseenter", function(sym, e) {
+      Symbol.bindElementAction(compId, symbolName, "${_tomcat_profile}", "mouseenter", function(sym, e) {
          var isBusy = sym.getVariable("busy");
          if (isBusy == "false") {
          	//draw(sym, "tomcat");
@@ -183,7 +183,7 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // alias pour les clas
       });
       //Edge binding end
 
-      Symbol.bindElementAction(compId, symbolName, "body > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > ul:nth-child(1) > li:nth-child(3) > a:nth-child(1)", "mouseenter", function(sym, e) {
+      Symbol.bindElementAction(compId, symbolName, "${_was_profile}", "mouseenter", function(sym, e) {
          var isBusy = sym.getVariable("busy");
          if (isBusy == "false") {
          	//draw(sym, "was");
@@ -192,7 +192,7 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // alias pour les clas
       });
       //Edge binding end
 
-      Symbol.bindElementAction(compId, symbolName, "body > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > ul:nth-child(1) > li:nth-child(4) > a:nth-child(1)", "mouseenter", function(sym, e) {
+      Symbol.bindElementAction(compId, symbolName, "${_osgi_profile}", "mouseenter", function(sym, e) {
          var isBusy = sym.getVariable("busy");
          if (isBusy == "false") {
          	//draw(sym, "osgi");
@@ -201,14 +201,7 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // alias pour les clas
       });
       //Edge binding end
 
-      Symbol.bindElementAction(compId, symbolName, "body > div:nth-child(1) > div:nth-child(1) > div:nth-child(1)", "mouseleave", function(sym, e) {
-         var isBusy = sym.getVariable("busy");
-         if (isBusy == "false") {
-         	draw(sym, sym.getVariable("selected"));
-         }
 
-      });
-      //Edge binding end
 
 
 
@@ -228,17 +221,16 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // alias pour les clas
          var url = "https://forge.peergreen.com/repository/content/repositories/releases/com/peergreen/community/peergreen-server-light/1.0.0-M1/peergreen-server-light-1.0.0-M1.jar";
          var desc = "<h2>Peergreen Tomcat </h2>";
          desc +="Tomcat : web container [Servlet 3.0, JSP 2.2]";
-         
+
          sym.setVariable("selected", "tomcat");
          sym.setVariable("downloadURL", url);
-         
+
          draw(sym, "tomcat");
          selectProfile(sym, desc, "4");
-         
+
          sym.setVariable("busy", "false");
-         sym.$("tomcat_profile").addClass("active");
+         sym.$("tomcat_profile").parent().addClass("active");
          sym.$("tomcat_profile").find('img').stop().animate({ opacity: 1 });
-         
          sym.$('.button').click(function() {
          	if (sym.getVariable("busy") == "false") {
          		$('.profiles').removeClass('active');
@@ -247,6 +239,8 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // alias pour les clas
          		$('.profiles').find('.profile_title').css("font-weight", "normal");
          		$(this).find('img').stop().animate({ opacity: 1 });
          		$(this).find('.profile_title').css("font-weight", "bold");
+         		$('html, body').animate({scrollTop:0}, 'slow');
+         		$('#btnDownload')
          	}
          });
          $('.profiles').hover(
@@ -282,6 +276,21 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // alias pour les clas
       //Edge binding end
 
 
+
+      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 2315, function(sym, e) {
+         sym.play()
+
+      });
+      //Edge binding end
+
+      Symbol.bindElementAction(compId, symbolName, "${_profiles_menu}", "mouseleave", function(sym, e) {
+         var isBusy = sym.getVariable("busy");
+         if (isBusy == "false") {
+         	//draw(sym, sym.getVariable("selected"));
+         }
+
+      });
+      //Edge binding end
 
    })("stage");
    //Edge symbol end:'stage'
