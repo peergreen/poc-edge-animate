@@ -2,14 +2,35 @@
 <html>
 	<head>
 		<link xmlns="http://www.w3.org/1999/xhtml" href="http://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css" />
-		<link href="http://site-dev-tests.peergreen.com/skin/skins/lyrebird/lib/bootstrap/css/bootstrap.css" rel="stylesheet">
-    	<link href="http://site-dev-tests.peergreen.com/skin/skins/lyrebird/lib/bootstrap/css/bootstrap%2Dresponsive.css" rel="stylesheet">
-    	<link href="http://site-dev-tests.peergreen.com/download/XWiki/DefaultSkin/doc.css" rel="stylesheet"/>
-    	<script src="http://site-dev-tests.peergreen.com/skins/lyrebird/lib/bootstrap/js/jquery.js"></script>    	
-		<script src="http://site-dev-tests.peergreen.com/skins/lyrebird/lib/bootstrap/js/bootstrap.js"></script>
+		<link href="http://www.peergreen.com/skin/skins/lyrebird/lib/bootstrap/css/bootstrap.css" rel="stylesheet"/>
+    	<link href="http://www.peergreen.com/skin/skins/lyrebird/lib/bootstrap/css/bootstrap%2Dresponsive.css" rel="stylesheet"/>
+    	<link href="http://www.peergreen.com/download/XWiki/DefaultSkin/doc.css" rel="stylesheet"/>
+    	<link rel="stylesheet" type="text/css" href="http://www.peergreen.com/download/XWiki/DefaultSkin/tooltipster.css" />
+    	<script src="http://www.peergreen.com/skins/lyrebird/lib/bootstrap/js/jquery.js"></script>    
+		<script type='text/javascript' src='http://www.peergreen.com/download/XWiki/DefaultSkin/jquery.tooltipster.min.js'></script>
+	
 		<style>
-			#box, #desc, #btnDownload, #choice {
+			#box, #desc, #btnDownload, #choice, #getStarted {
 				font-family : 'Lato';
+			}
+			#btnDownload {
+				font-size : 30px;
+			}
+			#size {
+				text-align : right;
+			}
+			#tags {
+				font-family : 'Lato';
+				color : #C03000;
+				text-align : center;
+			}
+			#tags img {
+				display : block;
+				margin : 0 auto;
+				width : 60px;
+			}
+			#getStarted {
+				text-decoration : none;
 			}
 			.profile_title {
 				display : table;
@@ -21,6 +42,8 @@
 				vertical-align : middle;
 			}
 		</style>
+		
+		
 
 <!--Adobe Edge Runtime-->
     <script type="text/javascript" charset="utf-8" src="downloadProfileV2_edgePreload.js"></script>
@@ -29,34 +52,72 @@
         img { display: block; }
     </style>
 <!--Adobe Edge Runtime End-->
-
-</head>
+		<script type= "text/javascript">
+     	$(document).ready(function() { 
+        	$('.tooltip').tooltipster({ 
+        		animation: 'grow', 
+        		position: 'top'
+        	});
+   		});
+</script>
+	</head>
 	
-	<body style="width:850px">
+	<body style="width:800px">
 	<div class="container-fluid">
  		<div class="row-fluid">
   			<div class="span5 bs-docs-sidebar">
-  				<h3 id="choice">Choose a profile : </h3>
+				<h3 id="choice">Choose a profile</h3>
    				<ul id="profiles_menu" class="nav nav-list bs-docs-sidenav" style="width:100%">
-     				<li class="profiles"><a id="kernel_profile" class="button" href="#"><div class="row-fluid"><div class="span3"><img src="images/kernel-infini-logo.png" style="width:32px;opacity:0.2"/></div><div class="profile_title"><span>Kernel</span></div></div></a></li>
-     				<li class="profiles"><a id="tomcat_profile" class="button" href="#"><div class="row-fluid"><div class="span3"><img src="images/logo_tomcat.png" style="width:32px;opacity:0.2"/></div><div class="profile_title"><span>Tomcat</span></div></div></a></li>
-     				<li class="profiles"><a id="was_profile" class="button" href="#"><div class="row-fluid"><div class="span3"><img src="images/logo_was.png" style="width:32px;opacity:0.2"/></div><div class="profile_title"><span>Web Application Server</span></div></div></a></li>
-     				<li class="profiles"><a id="osgi_profile" class="button" href="#"><div class="row-fluid"><div class="span3"><img src="images/osgi_logo.png" style="width:32px;opacity:0.2"/></div><div class="profile_title"><span>Enterprise OSGi Server</span></div></div></a></li>
+     				<li class="profiles"><a id="kernel_profile" class="button" href="#choice"><div class="row-fluid"><div class="span3"><img src="images/kernel-infini-logo.png" style="width:32px;opacity:0.2"/></div><div class="profile_title"><span>Kernel</span></div></div></a></li>
+     				<li class="profiles"><a id="tomcat_profile" class="button" href="#choice"><div class="row-fluid"><div class="span3"><img src="images/logo_tomcat.png" style="width:32px;opacity:0.2"/></div><div class="profile_title"><span>Tomcat</span></div></div></a></li>
+     				<li class="profiles"><a id="was_profile" class="button" href="#choice"><div class="row-fluid"><div class="span3"><img src="images/logo_was.png" style="width:32px;opacity:0.2"/></div><div class="profile_title"><span>Web Application Server</span></div></div></a></li>
+     				<li class="profiles"><a id="osgi_profile" class="button" href="#choice"><div class="row-fluid"><div class="span3"><img src="images/osgi_logo.png" style="width:32px;opacity:0.2"/></div><div class="profile_title"><span>Enterprise OSGi Server</span></div></div></a></li>
+     				<li class="profiles"><a id="alacarte_profile" class="button" href="#choice"><div class="row-fluid"><div class="span3"><img src="images/build.png" style="width:32px;opacity:0.2"/></div><div class="profile_title"><span>A la carte Server</span></div></div></a></li>
    				</ul>
+  			</div>
+  			<div id="tags" class="span2 offset5 edgeLoad-EDGE-634258009">
+  				<br /><br />
+  				<div id="java" class="edgeLoad-EDGE-634258009" title="javaa">
+  					<img src="images/java.png"/>
+	  				<span>Requires <br/>Java SE 7</span>
+	  			</div>
+	  			<br />
+  				<div id="raspberry" style="display:none;">
+  					<img src="images/raspberry.png"/>
+  					<span>Compatible</span>
+  				</div>
   			</div>
   		</div>
   	</div>
   	<div class="container-fluid edgeLoad-EDGE-634258009" style="padding-top:100px">
+  		<div class="row-fluid">
+  			<div id="getStarted" class="alert alert-info span10 offset2" style="display:none">
+  				<h5><a id="linkGetStarted" href="#">Get started with Peergreen Server</a></h5>
+	  		</div>
+  		</div>
   		<div class="well" style="min-height:160px">
   			<div class="row-fluid">
-  				<div id="box" class="span2"	>
+  				<div id="box" class="span2"	style="padding-top:10px">
 	  			</div>
   				<div id="desc" class="span8" style="padding-left:10px">
   				</div>
-  				<div id="btnDownload" class="span2 edgeLoad-EDGE-634258009">
+  				<div id="btnDownload" class="span2 edgeLoad-EDGE-634258009" style="opacity:0.6">
+  					<div id="imgDownload"><!--<span style="font-size:12px">2) Click to download</span><br/>--><img src="images/download_cloud.png" style="padding-bottom:20px;padding-top:20px;width:100px"/></div>
+  					<div id="textDownload" class="row-fluid">
+  						<div id="size" class="span5"></div>
+  						<div class="span7">MB</div>
+  					</div>
   				</div>
   			</div>
   		</div>	
-  	</div>	
-	</body>	
+  		
+  	</div>
+  	</body>
 </html>
+  		
+		
+
+
+
+
+

@@ -7,13 +7,19 @@
    \"timelines\": {\
       \"Default Timeline\": {\
             \"ElementKeyframes\": {\
-                \"${_p_jdbcCopy}\": [], \
+                \"${_Group3}\": [], \
+                \"${_step2}\": [], \
+                \"body > div:nth-child(1) > div:nth-child(1)\": [], \
+                \"${_tige}\": [], \
+                \"${_step1}\": [], \
+                \"${_step1Copy4}\": [], \
+                \"${_step1Copy2}\": [], \
                 \"${_Daisy}\": [], \
-                \"${_tigeCopy}\": [], \
-                \"${_kernel}\": [], \
-                \"${_Rectangle}\": [], \
-                \"body > div:nth-child(2)\": [], \
-                \"${_tige}\": []\
+                \"${_bigLeaf}\": [], \
+                \"${_step1Copy3}\": [], \
+                \"${_step1Copy}\": [], \
+                \"${_textInLeaf}\": [], \
+                \"${_smallLeaf}\": []\
             }\
       }\
    }},\
@@ -23,21 +29,19 @@
    }},\
 \"Niveau inférieur\": {\
    \"timelines\": {\
-      \"Default Timeline\": {\
-            \"ElementKeyframes\": {\
-                \"${symbolSelector}\": []\
-            }\
-      }\
+\
    }}\
 }",
 	"pref__general__codeView":"sectionalView",
-	"viewStartMs":"-14.762624466572",
-	"pixelsPerMs":"0.33869316470942",
+	"viewStartMs":"-121.42647382664",
+	"pixelsPerMs":"0.041177181898063",
 	"viewStartY":"0",
 	"Niveau inférieur-Default Timeline_playhead_ms":"0",
 	"pref__general__AutoKeyframePropertiesArmed":"false",
 	"stage-Default Timeline_mark_ms":"-1",
 	"symbol_stage":{
+		"element_${_step1Copy}":{
+			"animationEnabled":"false"},
 		"element_${_product_box}":{
 			"animationEnabled":"false"},
 		"element_${_p_jdbc}":{
@@ -48,14 +52,9 @@
 			"timelineColor3":"0x5b6c4d"},
 		"element_${_p_easybeans}":{
 			"invisible":"false"},
-		"element_${_Daisy}":{
-			"timelineColor2":"0xcbbd71",
-			"timelineColor3":"0x7b7652",
-			"timelineColor":"0xeedf79",
-			"timelineTreeOpened":"true",
-			"animationEnabled":"true",
-			"invisible":"false"},
-		"element_${_p_tomcat}":{
+		"element_${_tige}":{
+			"animationEnabled":"false"},
+		"element_${_p_jersey}":{
 			"invisible":"false"},
 		"element_${_Rectangle}":{
 			"animationEnabled":"false"},
@@ -64,35 +63,51 @@
 			"animationEnabled":"false",
 			"timelineColor3":"0x456a55",
 			"timelineColor":"0x50bd82"},
+		"element_${_p_tomcat}":{
+			"invisible":"false"},
+		"element_${_Daisy}":{
+			"timelineColor2":"0xcbbd71",
+			"timelineColor3":"0x7b7652",
+			"timelineColor":"0xeedf79",
+			"timelineTreeOpened":"true",
+			"animationEnabled":"true",
+			"invisible":"false"},
+		"element_${_p_jotm}":{
+			"invisible":"false"},
 		"element_${_p_jndi}":{
 			"invisible":"false"},
-		"element_${_tigeCopy}":{
-			"animationEnabled":"false"},
+		"element_${_step3}":{
+			"timelineColor2":"0x1aa38f",
+			"animationEnabled":"false",
+			"timelineColor3":"0x2a6a61",
+			"timelineColor":"0x00bda4"},
 		"element_${_p_h2}":{
 			"invisible":"false"},
 		"element_${_download}":{
 			"animationEnabled":"false"},
-		"element_${_tige}":{
-			"animationEnabled":"false"},
+		"element_${_step2}":{
+			"timelineColor2":"0x168c84",
+			"animationEnabled":"false",
+			"timelineColor3":"0x2a605c",
+			"timelineColor":"0x00a096"},
 		"element_${_p_aries}":{
 			"invisible":"false"},
 		"element_${_choice}":{
 			"locked":"false",
 			"invisible":"false"},
-		"element_${_p_jotm}":{
-			"invisible":"false"},
+		"element_${_profiles_menu}":{
+			"epOpened":"true"},
+		"codeTreeElementPopupFilter":"",
 		"element_${_p_hibernate}":{
 			"invisible":"false"},
 		"element_${_profile_desc}":{
-			"animationEnabled":"false"},
-		"element_${_p_jersey}":{
-			"invisible":"false"}},
-	"TransitionIdCounter":"1594",
+			"animationEnabled":"false"}},
+	"TransitionIdCounter":"2996",
 	"CompZoomFactor":"100",
 	"StageZoomFactor":"100",
 	"colorSwatches":"rgba(192,192,192,0.00)",
 	"pref__general__GenerateSmoothTransitions":"true",
-	"nextElementColorIndex":"4",
+	"nextElementColorIndex":"6",
 	"usedBOM":"false",
 	"ShowRulers":"false",
 	"pref__general__TimelineShowGrid":"true",
@@ -101,5 +116,5 @@
 		"defaultStageParentHeight":"583px",
 		"dummyStageParentWidth":"1374px",
 		"dummyStageParentHeight":"528px"},
-	"stage-Default Timeline_playhead_ms":"2315",
-	"PreloaderType":"Polite"}
+	"PreloaderType":"Polite",
+	"stage-Default Timeline_playhead_ms":"2315"}
