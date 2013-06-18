@@ -18,6 +18,7 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // alias pour les clas
   
          if ($profile == "alacarte") { 
          	sym.$("p_easybeans").fadeIn(); 
+         	sym.$("p_easybeans").stop().animate({ opacity: 1 })
          	sym.$("easybeans_mouseover").fadeIn();
          } else { 
          	sym.$("p_easybeans").fadeOut();
@@ -29,11 +30,13 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // alias pour les clas
 				sym.$("tomcat_mouseover").fadeOut();
 			} else {	 
 				 sym.$("p_tomcat").fadeIn();
+				sym.$("p_tomcat").stop().animate({ opacity: 1 });
 				 sym.$("tomcat_mouseover").fadeIn();
 			}
 
          if (($profile == "alacarte")||($profile == "osgi")) { 
          	sym.$("p_jndi").fadeIn();  
+         	sym.$("p_jndi").stop().animate({ opacity: 1 })
          	sym.$("jndi_mouseover").fadeIn();  
          } else {	
          	sym.$("p_jndi").fadeOut();
@@ -42,6 +45,7 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // alias pour les clas
 
          if (($profile == "alacarte")||($profile == "osgi")) { 
          	sym.$("p_aries").fadeIn();
+         	sym.$("p_aries").stop().animate({ opacity: 1 })
          	sym.$("aries_mouseover").fadeIn();
          } else { 
          	sym.$("p_aries").fadeOut();
@@ -50,6 +54,7 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // alias pour les clas
 
          if (($profile == "alacarte")||($profile == "was")||($profile == "osgi")) { 
          	sym.$("p_h2").fadeIn(); 
+         	sym.$("p_h2").stop().animate({ opacity: 1 })
          	sym.$("h2_mouseover").fadeIn(); 
          } else { 
          	sym.$("p_h2").fadeOut();
@@ -58,6 +63,7 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // alias pour les clas
 
          if (($profile == "alacarte")||($profile == "was")) { 
          	sym.$("p_jersey").fadeIn(); 
+         	sym.$("p_jersey").stop().animate({ opacity: 1 })
          	sym.$("jersey_mouseover").fadeIn(); 
          } else { 
          	sym.$("p_jersey").fadeOut();
@@ -66,6 +72,7 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // alias pour les clas
 
 			if (($profile == "alacarte")||($profile == "was")) { 
 				sym.$("p_hibernate").fadeIn(); 
+				sym.$("p_hibernate").stop().animate({ opacity: 1 })
 				sym.$("hibernate_mouseover").fadeIn(); 
 			} else { 
 				sym.$("p_hibernate").fadeOut();
@@ -74,6 +81,7 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // alias pour les clas
 
          if (($profile == "alacarte")||($profile == "was")||($profile == "osgi")) { 
          	sym.$("p_jotm").fadeIn(); 
+         	sym.$("p_jotm").stop().animate({ opacity: 1 })
          	sym.$("jotm_mouseover").fadeIn(); 
          } else { 
          	sym.$("p_jotm").fadeOut();
@@ -296,10 +304,12 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // alias pour les clas
          sym.setVariable("init", "true");
          sym.setVariable("busy", "false");
 
-         sym.$('h2_mouseover').addClass('tooltip');
-
          sym.$('.button').click(function() {
          	if (sym.getVariable("busy") == "false") {
+         		if (sym.getVariable("selected") != "alacarte") {
+         			sym.stop();
+         			draw(sym, sym.getVariable("selected"));
+         		}
          		$('.profiles').removeClass('active');
          		$(this).parent().addClass('active');
          		$('.profiles').find('img').stop().animate({ opacity: 0.2 });
@@ -376,8 +386,16 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // alias pour les clas
 
 
 
-      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 2315, function(sym, e) {
-         sym.play()
+      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 3500, function(sym, e) {
+         sym.play();
+         sym.$('p_tomcat').stop().animate({ opacity: 0.2 });
+         sym.$('p_jotm').stop().animate({ opacity: 0.2 });
+         sym.$('p_jndi').stop().animate({ opacity: 0.2 });
+         sym.$('p_hibernate').stop().animate({ opacity: 0.2 });
+         sym.$('p_jersey').stop().animate({ opacity: 0.2 });
+         sym.$('p_easybeans').stop().animate({ opacity: 0.2 });
+         sym.$('p_h2').stop().animate({ opacity: 0.2 });
+         sym.$('p_aries').stop().animate({ opacity: 0.2 });
 
       });
       //Edge binding end
@@ -410,6 +428,7 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // alias pour les clas
 
          	draw(sym, "alacarte");
          	selectProfile(sym, desc, "");
+         	sym.play("play2");
           }
 
       });
@@ -432,6 +451,9 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // alias pour les clas
 
       Symbol.bindElementAction(compId, symbolName, "${_btnDownload}", "mouseleave", function(sym, e) {
          sym.$('btnDownload').stop().animate({ opacity: 0.6 });
+         if (sym.getVariable("alacarte")) {
+         	sym.play("play2");
+         }
 
       });
       //Edge binding end
@@ -443,109 +465,242 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // alias pour les clas
       //Edge binding end
 
       Symbol.bindElementAction(compId, symbolName, "${_h2_mouseover}", "mouseenter", function(sym, e) {
-         showPetal(sym, "h2", "H2 1.3");
+         showPetal(sym, "h2", "<br/>H2 Database");
+         if (sym.getVariable("selected") == "alacarte") {
+         	sym.stop();
+         }
 
       });
       //Edge binding end
 
       Symbol.bindElementAction(compId, symbolName, "${_h2_mouseover}", "mouseleave", function(sym, e) {
          showAllPetals(sym);
+         if (sym.getVariable("selected") == "alacarte") {
+         	sym.play("play2");
+         }
 
       });
       //Edge binding end
 
       Symbol.bindElementAction(compId, symbolName, "${_easybeans_mouseover}", "mouseenter", function(sym, e) {
-         showPetal(sym,"easybeans", "EasyBeans 3.0");
+         showPetal(sym,"easybeans", "OW2 EasyBeans<br />EJB container");
+         if (sym.getVariable("selected") == "alacarte") {
+         	sym.stop();
+         }
 
       });
       //Edge binding end
 
       Symbol.bindElementAction(compId, symbolName, "${_jersey_mouseover}", "mouseenter", function(sym, e) {
-         showPetal(sym,"jersey", "Jersey 2.0");
-
+         showPetal(sym,"jersey", "Jersey RESTful <br/> Web Services");
+         if (sym.getVariable("selected") == "alacarte") {
+         	sym.stop();
+         }
 
       });
       //Edge binding end
 
       Symbol.bindElementAction(compId, symbolName, "${_hibernate_mouseover}", "mouseenter", function(sym, e) {
-         showPetal(sym,"hibernate", "Hibernate 4.1");
-
+         showPetal(sym,"hibernate", "Hibernate<br/>Persistence Manager");
+         if (sym.getVariable("selected") == "alacarte") {
+         	sym.stop();
+         }
 
       });
       //Edge binding end
 
       Symbol.bindElementAction(compId, symbolName, "${_jndi_mouseover}", "mouseenter", function(sym, e) {
-         showPetal(sym,"jndi", "JNDI 1.0");
-
+         showPetal(sym,"jndi", "JNDI <br/> Java Naming");
+         if (sym.getVariable("selected") == "alacarte") {
+         	sym.stop();
+         }
 
       });
       //Edge binding end
 
       Symbol.bindElementAction(compId, symbolName, "${_jotm_mouseover}", "mouseenter", function(sym, e) {
-         showPetal(sym,"jotm", "JOTM 2.3");
-
+         showPetal(sym,"jotm", "OW2 JOTM <br/> Transaction Manager");
+         if (sym.getVariable("selected") == "alacarte") {
+         	sym.stop();
+         }
 
       });
       //Edge binding end
 
       Symbol.bindElementAction(compId, symbolName, "${_tomcat_mouseover}", "mouseenter", function(sym, e) {
-         showPetal(sym,"tomcat", "Tomcat 7");
-
+         showPetal(sym,"tomcat", "Apache Tomcat<br/>Web container");
+         if (sym.getVariable("selected") == "alacarte") {
+         	sym.stop();
+         }
 
       });
       //Edge binding end
 
       Symbol.bindElementAction(compId, symbolName, "${_aries_mouseover}", "mouseenter", function(sym, e) {
-         showPetal(sym,"aries", "Aries 1.0");
-
+         showPetal(sym,"aries", "Apache Aries<br/>OSGi isolation");
+         if (sym.getVariable("selected") == "alacarte") {
+         	sym.stop();
+         }
 
       });
       //Edge binding end
 
       Symbol.bindElementAction(compId, symbolName, "${_easybeans_mouseover}", "mouseleave", function(sym, e) {
          showAllPetals(sym);
+         if (sym.getVariable("selected") == "alacarte") {
+         	sym.play("play2");
+         }
 
       });
       //Edge binding end
 
       Symbol.bindElementAction(compId, symbolName, "${_jersey_mouseover}", "mouseleave", function(sym, e) {
          showAllPetals(sym);
-
+         if (sym.getVariable("selected") == "alacarte") {
+         	sym.play("play2");
+         }
 
       });
       //Edge binding end
 
       Symbol.bindElementAction(compId, symbolName, "${_hibernate_mouseover}", "mouseleave", function(sym, e) {
          showAllPetals(sym);
-
+         if (sym.getVariable("selected") == "alacarte") {
+         	sym.play("play2");
+         }
 
       });
       //Edge binding end
 
       Symbol.bindElementAction(compId, symbolName, "${_jndi_mouseover}", "mouseleave", function(sym, e) {
          showAllPetals(sym);
-
+         if (sym.getVariable("selected") == "alacarte") {
+         	sym.play("play2");
+         }
 
       });
       //Edge binding end
 
       Symbol.bindElementAction(compId, symbolName, "${_jotm_mouseover}", "mouseleave", function(sym, e) {
          showAllPetals(sym);
-
+         if (sym.getVariable("selected") == "alacarte") {
+         	sym.play("play2");
+         }
 
       });
       //Edge binding end
 
       Symbol.bindElementAction(compId, symbolName, "${_tomcat_mouseover}", "mouseleave", function(sym, e) {
          showAllPetals(sym);
-
+         if (sym.getVariable("selected") == "alacarte") {
+         	sym.play("play2");
+         }
 
       });
       //Edge binding end
 
       Symbol.bindElementAction(compId, symbolName, "${_aries_mouseover}", "mouseleave", function(sym, e) {
          showAllPetals(sym);
+         if (sym.getVariable("selected") == "alacarte") {
+         	sym.play("play2");
+         }
 
+      });
+      //Edge binding end
+
+      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 4500, function(sym, e) {
+         sym.$('p_tomcat').stop().animate({ opacity: 1 });
+
+      });
+      //Edge binding end
+
+      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 5500, function(sym, e) {
+         sym.$('p_jotm').stop().animate({ opacity: 1 });
+
+      });
+      //Edge binding end
+
+      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 6500, function(sym, e) {
+         sym.$('p_jndi').stop().animate({ opacity: 1 });
+
+      });
+      //Edge binding end
+
+      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 7500, function(sym, e) {
+         sym.$('p_hibernate').stop().animate({ opacity: 1 });
+
+      });
+      //Edge binding end
+
+      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 8500, function(sym, e) {
+         sym.$('p_jersey').stop().animate({ opacity: 1 });
+
+      });
+      //Edge binding end
+
+      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 9500, function(sym, e) {
+         sym.$('p_easybeans').stop().animate({ opacity: 1 });
+
+      });
+      //Edge binding end
+
+      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 10500, function(sym, e) {
+         sym.$('p_h2').stop().animate({ opacity: 1 });
+
+      });
+      //Edge binding end
+
+      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 11500, function(sym, e) {
+         sym.$('p_aries').stop().animate({ opacity: 1 });
+
+      });
+      //Edge binding end
+
+      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 12500, function(sym, e) {
+         sym.$('p_tomcat').stop().animate({ opacity: 0.2 });
+
+      });
+      //Edge binding end
+
+      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 13500, function(sym, e) {
+         sym.$('p_jotm').stop().animate({ opacity: 0.2 });
+
+      });
+      //Edge binding end
+
+      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 14500, function(sym, e) {
+         sym.$('p_jndi').stop().animate({ opacity: 0.2 });
+
+      });
+      //Edge binding end
+
+      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 15500, function(sym, e) {
+         sym.$('p_hibernate').stop().animate({ opacity: 0.2 });
+
+      });
+      //Edge binding end
+
+      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 16500, function(sym, e) {
+         sym.$('p_jersey').stop().animate({ opacity: 0.2 });
+
+      });
+      //Edge binding end
+
+      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 17500, function(sym, e) {
+         sym.$('p_easybeans').stop().animate({ opacity: 0.2 });
+
+      });
+      //Edge binding end
+
+      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 18500, function(sym, e) {
+         sym.$('p_h2').stop().animate({ opacity: 0.2 });
+
+      });
+      //Edge binding end
+
+      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 19500, function(sym, e) {
+         sym.$('p_aries').stop().animate({ opacity: 0.2 });
+         sym.play("play2");
 
       });
       //Edge binding end
