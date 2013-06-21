@@ -41,9 +41,30 @@
 				display : table-cell;
 				vertical-align : middle;
 			}
+			
+			.tooltipster-shadow {
+				border-radius: 5px;
+				background: #fff;
+				box-shadow: 0px 0px 14px rgba(0,0,0,0.3);
+				color: #2c2c2c;
+			}
+			.tooltipster-shadow .tooltipster-content {
+				font-family: 'Arial', sans-serif;
+				font-size: 14px;
+				line-height: 16px;
+				padding: 8px 10px;
+			}
 		</style>
 		
-		
+	<script>
+		jQuery(function($) {
+			$('#tags>div').tooltipster({
+				animation: 'grow',
+				position: 'right',
+				theme : '.tooltipster-shadow'
+			});
+		})(jQuery);
+	</script>	
 
 <!--Adobe Edge Runtime-->
     <script type="text/javascript" charset="utf-8" src="downloadProfileV2_edgePreload.js"></script>
@@ -52,14 +73,6 @@
         img { display: block; }
     </style>
 <!--Adobe Edge Runtime End-->
-		<script type= "text/javascript">
-     	$(document).ready(function() { 
-        	$('.tooltip').tooltipster({ 
-        		animation: 'grow', 
-        		position: 'top'
-        	});
-   		});
-</script>
 	</head>
 	
 	<body style="width:800px">
@@ -68,27 +81,35 @@
   			<div class="span5 bs-docs-sidebar">
 				<h3 id="choice">Choose a profile</h3>
    				<ul id="profiles_menu" class="nav nav-list bs-docs-sidenav" style="width:100%">
-     				<li class="profiles"><a id="kernel_profile" class="button" href="#choice"><div class="row-fluid"><div class="span3"><img src="images/kernel-infini-logo.png" style="width:32px;opacity:0.2"/></div><div class="profile_title"><span>Kernel</span></div></div></a></li>
-     				<li class="profiles"><a id="tomcat_profile" class="button" href="#choice"><div class="row-fluid"><div class="span3"><img src="images/logo_tomcat.png" style="width:32px;opacity:0.2"/></div><div class="profile_title"><span>Tomcat</span></div></div></a></li>
-     				<li class="profiles"><a id="was_profile" class="button" href="#choice"><div class="row-fluid"><div class="span3"><img src="images/logo_was.png" style="width:32px;opacity:0.2"/></div><div class="profile_title"><span>Web Application Server</span></div></div></a></li>
-     				<li class="profiles"><a id="osgi_profile" class="button" href="#choice"><div class="row-fluid"><div class="span3"><img src="images/osgi_logo.png" style="width:32px;opacity:0.2"/></div><div class="profile_title"><span>Enterprise OSGi Server</span></div></div></a></li>
-     				<li class="profiles"><a id="alacarte_profile" class="button" href="#choice"><div class="row-fluid"><div class="span3"><img src="images/build.png" style="width:32px;opacity:0.2"/></div><div class="profile_title"><span>A la carte Server</span></div></div></a></li>
+     				<li class="profiles"><a id="kernel_profile" class="button" style="cursor:pointer"><div class="row-fluid"><div class="span3"><img src="images/kernel-infini-logo.png" style="width:32px;opacity:0.2"/></div><div class="profile_title"><span>Kernel</span></div></div></a></li>
+     				<li class="profiles"><a id="tomcat_profile" class="button" style="cursor:pointer"><div class="row-fluid"><div class="span3"><img src="images/logo_tomcat.png" style="width:32px;opacity:0.2"/></div><div class="profile_title"><span>Tomcat</span></div></div></a></li>
+     				<li class="profiles"><a id="was_profile" class="button" style="cursor:pointer"><div class="row-fluid"><div class="span3"><img src="images/logo_was.png" style="width:32px;opacity:0.2"/></div><div class="profile_title"><span>Web Application Server</span></div></div></a></li>
+     				<li class="profiles"><a id="osgi_profile" class="button" style="cursor:pointer"><div class="row-fluid"><div class="span3"><img src="images/osgi_logo.png" style="width:32px;opacity:0.2"/></div><div class="profile_title"><span>Enterprise OSGi Server</span></div></div></a></li>
+     				<li class="profiles"><a id="alacarte_profile" class="button" style="cursor:pointer"><div class="row-fluid"><div class="span3"><img src="images/build.png" style="width:32px;opacity:0.2"/></div><div class="profile_title"><span>A la carte Server</span></div></div></a></li>
    				</ul>
   			</div>
   			<div id="tags" class="span2 offset5 edgeLoad-EDGE-634258009">
-  				<br /><br />
-  				<div id="java" class="edgeLoad-EDGE-634258009">
-  					<img src="images/java.png"/>
+  				<br />
+  				<div id="java" class="edgeLoad-EDGE-634258009" title="Click to download Oracle JDK">
+  					<img src="images/java.png" style="width:48px; padding-top:15px" />
 	  				<span>Requires <br/>Java SE 7</span>
 	  			</div>
-	  			<br />
-  				<div id="raspberry" style="display:none;">
-  					<img src="images/raspberry.png"/>
+	  			<div id="hybrid" style="display:none;" title="Peergreen Servers support both OSGi and JavaEE">
+  					<img src="images/hybrid.png" style="width:48px; padding-top:10px"/>
+	  				<span>OSGi/JavaEE <br />Hybrid</span>
+	  			</div>
+	  			<div id="framework" style="display:none;" title="Peergreen Kernel is considered as an OSGi framework">
+  					<img src="images/osgi_logo2.png" style="width:48px; padding-top:10px"/>
+	  				<span>OSGi<br />Framework</span>
+	  			</div>
+  				<div id="raspberry" style="display:none;" title="Peergreen Kernel runs on Raspberry Pi">
+  					<img src="images/raspberry.png" style="width:48px; padding-top:10px"/>
   					<span>Compatible</span>
   				</div>
   			</div>
   		</div>
   	</div>
+  	
   	<div class="container-fluid edgeLoad-EDGE-634258009" style="padding-top:100px">
   		<div class="row-fluid">
   			<div id="getStarted" class="alert alert-info span10 offset2" style="display:none">
@@ -104,8 +125,8 @@
   				<div id="btnDownload" class="span2 edgeLoad-EDGE-634258009" style="opacity:0.6">
   					<div id="imgDownload"><!--<span style="font-size:12px">2) Click to download</span><br/>--><img src="images/download_cloud.png" style="padding-bottom:20px;padding-top:20px;width:100px"/></div>
   					<div id="textDownload" class="row-fluid">
-  						<div id="size" class="span5"></div>
-  						<div class="span7">MB</div>
+  						<div id="size" class="span7"></div>
+  						<div class="span5">MB</div>
   					</div>
   				</div>
   			</div>
@@ -114,8 +135,16 @@
   	</div>
   	</body>
 </html>
+
   		
 		
+
+
+
+
+
+
+
 
 
 
