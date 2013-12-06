@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
+	<link xmlns="http://www.w3.org/1999/xhtml" href="http://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css" />
+	<link href="http://www.peergreen.com/skin/skins/lyrebird/lib/bootstrap/css/bootstrap.css" rel="stylesheet"/>
+    <link href="http://www.peergreen.com/skin/skins/lyrebird/lib/bootstrap/css/bootstrap%2Dresponsive.css" rel="stylesheet"/>
+    <link rel="stylesheet" type="text/css" href="http://www.peergreen.com/download/XWiki/DefaultSkin/tooltipster.css" />
+    <link href="http://www.peergreen.com/download/XWiki/DefaultSkin/doc.css" rel="stylesheet"/>
+    <script src="http://www.peergreen.com/skins/lyrebird/lib/bootstrap/js/jquery.js"></script> 
+    <script type='text/javascript' src='http://www.peergreen.com/download/XWiki/DefaultSkin/jquery.tooltipster.min.js'></script>
+	
+	<style>
+	.text {
+		font-family : 'Lato';
+	}
+	.borderAndShadow {
+		border: 1px solid #ccc;
+  		border: 1px solid rgba(0, 0, 0, 0.2);
+  		*border-right-width: 2px;
+  		*border-bottom-width: 2px;
+  		-webkit-border-radius: 6px;
+     		-moz-border-radius: 6px;
+          		border-radius: 6px;
+  		-webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+     		-moz-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+          		box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  		-webkit-background-clip: padding-box;
+     		-moz-background-clip: padding;
+          		background-clip: padding-box;	
+	}
+	#store {
+		width:450px;
+  		min-width: 160px;
+  		margin-left: 50px;
+  		/*background: #fff url(images/hbar.png) repeat-y bottom left;*/			
+	}
+	#profiles {
+		height: 90px;
+	}
+	.petal {
+		cursor:pointer;
+		height:80px;
+	}
+	.profile {
+		margin: auto;
+		padding-top:5px;
+		cursor:pointer;
+		height:80px;
+	}
+	.desc {
+		font-family : 'Lato';
+		padding:10px 0 0 10px;
+	}
+	.tooltipster-shadow {
+		border-radius: 5px;
+		background: #fff;
+		box-shadow: 0px 0px 14px rgba(0,0,0,0.3);
+		color: #2c2c2c;
+	}
+	.tooltipster-shadow .tooltipster-content {
+		font-family: 'Lato', sans-serif;
+		font-size: 14px;
+		line-height: 16px;
+		padding: 8px 10px;
+	}
+	.java {
+		padding-left:2px;
+		padding-right:3px;
+		height:18px;
+		display:inline-block;
+	}
+	.osgi {
+		height:18px;
+		display:inline-block;
+	}
+	.line {
+		height:89px;
+		background: #fff url(images/hbar2.png) no-repeat bottom left;
+		-webkit-border-radius: 6px;
+     		-moz-border-radius: 6px;
+          		border-radius: 6px;
+  		-webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+     		-moz-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+          		box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  		-webkit-background-clip: padding-box;
+     		-moz-background-clip: padding;
+          		background-clip: padding-box;
+	}
+	.lastLine {
+		height:89px;
+		background : #fff;
+		-webkit-border-radius: 6px;
+     		-moz-border-radius: 6px;
+          		border-radius: 6px;
+  		-webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+     		-moz-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+          		box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  		-webkit-background-clip: padding-box;
+     		-moz-background-clip: padding;
+          		background-clip: padding-box;
+	}
+	.line:hover {
+		background: #eee url(images/hbar2.png) no-repeat bottom left;	
+	}
+	.lastLine:hover {
+		background: #eee;
+	}	
+	.imageInTooltip {
+		width : 40px;
+		float:left;
+		padding-right:10px;
+		margin:auto;
+	}
+	.textInTooltip {
+		float : left;
+	}
+	.imgContainerInTooltip {
+		display: table-cell;
+	    vertical-align: middle;
+	}
+	.imgContainerInTooltip * {
+		vertical-align: middle;
+	}
+	.download {
+		font-size : 30px;
+		font-family : 'Lato';
+		padding : 10px 15px 10px 10px;
+	}
+	.devices {
+		padding-top: 500px;
+	}
+	.devices-row {
+		height:120px;
+		background: #fff url(images/row.png) no-repeat bottom right;
+	}
+	.devices-row img {
+		cursor:pointer;
+		margin:auto;
+	}
+	</style>
+	<script>
+		$(document).ready(function(){
+			$('body').attr('width', '1024px');
+			/*$.get('profiles.xml', function(xml){
+				$(xml).find('profile').each(function() {
+					var profile = $(this);
+					var title = '<div class="imgContainerInTooltip"><img src="' + profile.find('logo').text() + '" class="imageInTooltip"/>';
+					title += '<p class="textInTooltip"><strong>'
+					title += profile.find('name').text();
+					title += '</strong><br />Click to download</p></div>';
+					$('#' + profile.attr('id') + '_profile').attr('title', title);
+					$('#' + profile.attr('id') + '_profile').click(function() {
+						window.location.href = profile.find('url').text();
+					});
+				});
+				$('.profile').tooltipster({
+					animation: 'grow',
+					position: 'bottom',
+					theme : '.tooltipster-shadow'
+				});	
+			});*/
+		
+			$('#b_tomcat').attr('title','<div class="imgContainerInTooltip"><img src="images/logo_tomcat.png" class="imageInTooltip"/><p class="textInTooltip"><strong>Apache Tomcat</strong><br /> Version 7</p></div>');
+			$('#b_jetty').attr('title','<div class="imgContainerInTooltip"><img src="images/Jetty_logo.png" class="imageInTooltip" style="padding-top:10px;"/><p class="textInTooltip"><strong>Jetty</strong><br /> Version 9</p></div>');
+			$('#b_hibernate').attr('title','<div class="imgContainerInTooltip"><img src="images/hibernate-mini-logo.png" class="imageInTooltip"/><p class="textInTooltip"><strong>Hibernate</strong><br /> Version 4.1</p></div>');
+			$('#b_eclipselink').attr('title','<div class="imgContainerInTooltip"><img src="images/eclipselink-logo.png" class="imageInTooltip" style="padding-top:10px;"/><p class="textInTooltip"><strong>EclipseLink</strong><br /> Version 2.4</p></div>');
+			$('#b_h2').attr('title','<div class="imgContainerInTooltip"><img src="images/H2_logo.png" class="imageInTooltip"/><p class="textInTooltip"><strong>H2 Database</strong><br /> Version 1.3</p></div>');
+			$('#b_derby').attr('title','<div class="imgContainerInTooltip"><img src="images/derby_logo.png" class="imageInTooltip"/><p class="textInTooltip"><strong>Derby Database</strong><br /> Version 10.10</p></div>');
+			$('#b_jersey').attr('title','<div class="imgContainerInTooltip"><img src="images/Jersey_yellow.png" class="imageInTooltip"/><p class="textInTooltip"><strong>Jersey</strong><br /> Version 2</p></div>');
+			$('#b_easybeans').attr('title','<div class="imgContainerInTooltip"><img src="images/easybeans-logo.png" class="imageInTooltip"/><p class="textInTooltip"><strong>OW2 EasyBeans</strong><br /> Version 3</p></div>');
+			$('#b_jotm').attr('title','<div class="imgContainerInTooltip"><img src="images/jotm.png" class="imageInTooltip" style="padding-top:5px;"/><p class="textInTooltip"><strong>OW2 JOTM</strong><br /> Version 2.3</p></div>');
+			$('#b_aries').attr('title','<div class="imgContainerInTooltip"><img src="images/logo_aries.png" class="imageInTooltip"/><p class="textInTooltip"><strong>OSGi Sub Systems</strong><br /> Version 1</p></div>');
+			$('#b_jndi').attr('title','<div class="imgContainerInTooltip"><img src="images/jndi.png" class="imageInTooltip"/><p class="textInTooltip"><strong>JNDI</strong><br /> Version 1</p></div>');
+			
+			var raspberry = '<div class="row-fluid" style="width:600px"><div class="span4 well"><b><center>Build</center></b><br/>- Oracle SE embedded V7 based<br />- Shortens time to market<br />- Eases application evolution<br /><br /></div>' + 
+						 '<div class="span4 well"><b><center>Run</center></b><br/>- Embedded device class support<br/>- Avoids human errors<br />- Eases provisioning and deployment<br />- Reduces maintenance costs</div>' + 
+						 '<div class="span4 well"><b><center>Manage</center></b><br/>- Reduces administration costs<br />- Reduces reaction time<br />- Eliminate repetitive tasks<br /><br /><br /></div></div>';
+			$('#raspberry2').attr('title',raspberry);
+			var server = '<div class="row-fluid" style="width:600px"><div class="span4 well"><b><center>Build</center></b><br/>- OSGi & Java EE based solution<br />- Shortens time to market<br />- Eases application evolution</div>' + 
+						 '<div class="span4 well"><b><center>Run</center></b><br/>- Avoids human errors<br />- Eases provisioning and deployment<br />- Reduces maintenance costs<br /><br /></div>' + 
+						 '<div class="span4 well"><b><center>Manage</center></b><br/>- Reduces administration costs<br />- Reduces reaction time<br />- Eliminate repetitive tasks<br /><br /></div></div>';
+			$('#server2').attr('title',server);
+			var cloud = '<div class="row-fluid" style="width:600px"><div class="span6 well"><b><center>Reduced costs</center></b><br/>- Remove investment costs<br />- Reduce operational costs<br />- Reduce energy costs<br /><br /></div>' + 
+						 '<div class="span6 well"><b><center>Efficiency</center></b><br/>- Powerful application lifecycle tool<br />- Optimizing IT resources <br />- Reactivity <br />- Simple applications<br /></div></div>';
+			$('#cloud2').attr('title',cloud);
+			
+			$('.petal').tooltipster({
+				animation: 'grow',
+				position: 'bottom',
+				theme : '.tooltipster-shadow'
+			});	
+			
+			$('.devicesImg').tooltipster({
+				animation: 'grow',
+				position: 'bottom',
+				theme : '.tooltipster-shadow'
+			});		
+			
+					
+		});
+	</script>	
+	<title>Application Factory V2</title>
+<!--Adobe Edge Runtime-->
+    <script type="text/javascript" charset="utf-8" src="applicationFactoryV2_edgePreload.js"></script>
+    <style>
+        .edgeLoad-EDGE-6711452 { visibility:hidden; }
+        img { display: block; }
+    </style>
+<!--Adobe Edge Runtime End-->
+
+</head>
+<body>
+	<div style="width:1024px">
+	<div class="row-fluid">
+		<div class="span6">
+				<div id="store" class="borderAndShadow">
+					<div class="row-fluid line">
+						<div class="span4 desc"><b>Web Container</b> <br />[<img src="images/logo_java.png" class="java"/>Servlet 3.0]<br/>
+						[<img src="images/osgi_logo.png" class="osgi"/>HTTP Service]</div>
+						<div class="span4"><img id="b_tomcat" class="petal" src="images/b_tomcat2.png"/></div>
+						<div class="span4"><img id="b_jetty" class="petal" src="images/b_jetty2.png"/></div>
+					</div>
+					<div class="row-fluid line">
+						<div class="span4 desc"><b>Persistence</b><br/>[<img src="images/logo_java.png" class="java"/>JPA 2.0]</div>
+						<div class="span4"><img id="b_hibernate" class="petal" src="images/b_hibernate2.png"/></div>
+						<div class="span4"><img id="b_eclipselink" class="petal" src="images/b_eclipselink2.png"/></div>
+					</div>
+					<div class="row-fluid line">
+						<div class="span4 desc"><b>Database</b><br/>[Java Database]</div>
+						<div class="span4"><img id="b_h2" class="petal" src="images/b_h22.png"/></div>
+						<div class="span4"><img id="b_derby" class="petal" src="images/b_derby2.png"/></div>
+					</div>
+					<div class="row-fluid line">
+						<div class="span4 desc"><b>Web Service</b><br/>[<img src="images/logo_java.png" class="java"/>JAX-RS 2.0]</div>
+						<div class="span4"><img id="b_jersey" class="petal" src="images/b_jersey2.png"/></div>
+					</div>
+					<div class="row-fluid line">
+						<div class="span4 desc"><b>EJB Container</b><br/>[<img src="images/logo_java.png" class="java"/>EJB 3.1]</div>
+						<div class="span4"><img id="b_easybeans" class="petal" src="images/b_easybeans2.png"/></div>
+					</div>
+					<div class="row-fluid line">
+						<div class="span4 desc"><b>Transaction</b><br/>[<img src="images/logo_java.png" class="java"/><img src="images/osgi_logo.png" class="osgi"/>JTA 1.1]</div>
+						<div class="span4"><img id="b_jotm" class="petal" src="images/b_jotm2.png"/></div>
+					</div>
+					<div class="row-fluid line">
+						<div class="span4 desc"><b>OSGi Sub Systems</b><br/>[<img src="images/osgi_logo.png" class="osgi"/>Sub Systems]</div>
+						<div class="span4"><img id="b_aries" class="petal" src="images/b_aries.png"/></div>
+					</div>
+					<div class="row-fluid lastLine">
+						<div class="span4 desc"><b>Naming</b><br/>[<img src="images/osgi_logo.png" class="osgi"/>Enterprise OSGi JNDI service]</div>
+						<div class="span4"><img id="b_jndi" class="petal" src="images/b_jndi.png"/></div>
+					</div>
+				</div>
+		</div>
+		<div class="span6">
+			<!--<div id="profiles" class="row-fluid borderAndShadow">
+				<div class="span3"><img id="kernel_profile" class="profile" src="images/box_kernel.png"/></div>
+				<div class="span3"><img id="tomcat_profile" class="profile" src="images/box_tomcat.png"/></div>
+				<div class="span3"><img id="was_profile" class="profile" src="images/box_was.png"/></div>
+				<div class="span3"><img id="osgi_profile" class="profile" src="images/box_osgi.png"/></div>	
+			</div>-->
+			<a id="downloadBtn" class="btn btn-primary btn-large" style="margin-left:50px;" ><span class="download">Go to download page</span></a>
+			<br/><span id="reset" style="margin-left:110px;font-family:'Lato';opacity:0">Double click on <img src="images/kernel-infini-logo.png" style="display:inline;width:30px"/> to reset</span>
+			<div class="devices">
+				<div class="row-fluid devices-row">
+				<div class="span3">
+					<img class="devicesImg edgeLoad-EDGE-6711452" id ="raspberry2" src="images/raspberry.png" style="width:50px;padding-top:20px;" class="devicesImg edgeLoad-EDGE-6711452"/>
+				</div>	
+				<div class="span3">
+					<img class="devicesImg edgeLoad-EDGE-6711452" id="server2" src="images/server.png" class="devicesImg edgeLoad-EDGE-6711452"/>
+				</div>
+				<div class="span3">
+					<img class="devicesImg edgeLoad-EDGE-6711452" id="cloud2" src="images/cloud.png" style="padding-top:10px;" class="devicesImg edgeLoad-EDGE-6711452"/>
+				</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	</div>
+</body>
+</html>
+

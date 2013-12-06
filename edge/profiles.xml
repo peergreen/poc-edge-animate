@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<profiles>
+	<profile id="kernel">
+		<name>Peergreen Kernel</name>
+		<logo>images/kernel-infini-logo.png</logo>
+		<version>M2</version>
+		<size>2,16</size>
+		<url>https://forge.peergreen.com/repository/content/repositories/releases/com/peergreen/community/peergreen-kernel/1.0.0-M2/peergreen-kernel-1.0.0-M2.jar</url>
+	</profile>
+	
+	<profile id="tomcat">
+		<name>Peergreen Tomcat</name>
+		<logo>images/tomcat-logo.png</logo>
+		<version>M2</version>
+		<size>4,42</size>
+		<url>https://forge.peergreen.com/repository/content/repositories/releases/com/peergreen/community/peergreen-server-tomcat/1.0.0-M2/peergreen-server-tomcat-1.0.0-M2.jar</url>
+	</profile>
+	
+	<profile id="was">
+		<name>Peergreen WAS</name>
+		<logo>images/logo_was.png</logo>
+		<version>M2</version>
+		<size>8,51</size>
+		<url>https://forge.peergreen.com/repository/content/repositories/releases/com/peergreen/community/peergreen-server-was/1.0.0-M2/peergreen-server-was-1.0.0-M2.jar</url>
+	</profile>
+	
+	<profile id="osgi">
+		<name>Peergreen Enterprise OSGi</name>
+		<logo>images/osgi_logo.png</logo>
+		<version>M2</version>
+		<size>4,90</size>
+		<url>https://forge.peergreen.com/repository/content/repositories/releases/com/peergreen/community/peergreen-server-osgiee/1.0.0-M2/peergreen-server-osgiee-1.0.0-M2.jar</url>
+	</profile>
+</profiles>

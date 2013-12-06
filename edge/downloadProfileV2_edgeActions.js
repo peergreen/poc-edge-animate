@@ -52,7 +52,7 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // alias pour les clas
 
          if (($profile == "alacarte")||($profile == "osgi")) { 
          	sym.$("p_jndi").fadeIn();  
-         	sym.$("p_jndi").stop().animate({ opacity: 1 })
+         	sym.$("p_jndi").stop().animate({ opacity: 1 });
          	sym.$("jndi_mouseover").fadeIn();  
          } else {	
          	sym.$("p_jndi").fadeOut();
@@ -70,7 +70,7 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // alias pour les clas
 
          if (($profile == "alacarte")||($profile == "was")||($profile == "osgi")) { 
          	sym.$("p_h2").fadeIn(); 
-         	sym.$("p_h2").stop().animate({ opacity: 1 })
+         	sym.$("p_h2").stop().animate({ opacity: 1 });
          	sym.$("h2_mouseover").fadeIn(); 
          } else { 
          	sym.$("p_h2").fadeOut();
@@ -79,7 +79,7 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // alias pour les clas
 
          if (($profile == "alacarte")||($profile == "was")) { 
          	sym.$("p_jersey").fadeIn(); 
-         	sym.$("p_jersey").stop().animate({ opacity: 1 })
+         	sym.$("p_jersey").stop().animate({ opacity: 1 });
          	sym.$("jersey_mouseover").fadeIn(); 
          } else { 
          	sym.$("p_jersey").fadeOut();
@@ -88,7 +88,7 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // alias pour les clas
 
 			if (($profile == "alacarte")||($profile == "was")) { 
 				sym.$("p_hibernate").fadeIn(); 
-				sym.$("p_hibernate").stop().animate({ opacity: 1 })
+				sym.$("p_hibernate").stop().animate({ opacity: 1 });
 				sym.$("hibernate_mouseover").fadeIn(); 
 			} else { 
 				sym.$("p_hibernate").fadeOut();
@@ -97,7 +97,7 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // alias pour les clas
 
          if (($profile == "alacarte")||($profile == "was")||($profile == "osgi")) { 
          	sym.$("p_jotm").fadeIn(); 
-         	sym.$("p_jotm").stop().animate({ opacity: 1 })
+         	sym.$("p_jotm").stop().animate({ opacity: 1 });
          	sym.$("jotm_mouseover").fadeIn(); 
          } else { 
          	sym.$("p_jotm").fadeOut();
@@ -192,17 +192,17 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // alias pour les clas
          if (isBusy == "false") {
          	sym.setVariable("selected", "kernel");
          	sym.setVariable("profileDrawn", "false");
-
-         	var url = "https://forge.peergreen.com/repository/content/repositories/releases/com/peergreen/community/peergreen-kernel/1.0.0-M2/peergreen-kernel-1.0.0-M2.jar";
-         	var serverName = "Peergreen Kernel 1.0M2";
+         
+         	var url = "https://forge.peergreen.com/repository/content/repositories/releases/com/peergreen/community/peergreen-kernel/1.0.0-RC1/peergreen-kernel-1.0.0-RC1.jar";
+         	var serverName = "Peergreen Kernel 1.0RC1";
          	var desc = '<h2>' + serverName + '</h2>';
          	desc += 'Provides a lightweight OSGi server.';	
          	sym.setVariable("serverName", serverName);
-
+         
          	sym.setVariable("downloadURL", url);
-
+         
          	//draw(sym, "kernel");
-         	selectProfile(sym, desc, "2,16");
+         	selectProfile(sym, desc, "2,20");
           }
 
       });
@@ -212,18 +212,18 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // alias pour les clas
          var isBusy = sym.getVariable("busy");
          if (isBusy == "false") {
          	sym.setVariable("selected", "tomcat");
-
-         	var url = "https://forge.peergreen.com/repository/content/repositories/releases/com/peergreen/community/peergreen-server-tomcat/1.0.0-M2/peergreen-server-tomcat-1.0.0-M2.jar";
-         	var serverName = "Peergreen Tomcat 1.0M2";
+         
+         	var url = "https://forge.peergreen.com/repository/content/repositories/releases/com/peergreen/community/peergreen-server-tomcat/1.0.0-M3/peergreen-server-tomcat-1.0.0-M3.jar";
+         	var serverName = "Peergreen Tomcat 1.0M3";
          	var desc = "<h2>" + serverName + "</h2>";
          	desc += 'Tomcat : web container [<img src="images/osgi_logo.png" style="height:18px;display:inline-block;"/> Http service | ';
          	desc += '<img src="images/logo_java.png" style="height:18px;display:inline-block;"/> Servlet 3.0, JSP 2.2]';
          	sym.setVariable("serverName", serverName);
-
+         
             sym.setVariable("downloadURL", url);
-
+         
          	//draw(sym, "tomcat");
-         	selectProfile(sym, desc, "4,42");
+         	selectProfile(sym, desc, "4,47");
          }
 
       });
@@ -233,10 +233,9 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // alias pour les clas
          var isBusy = sym.getVariable("busy");
          if (isBusy == "false") {
          	sym.setVariable("selected", "was");
-
-         	var url = "https://forge.peergreen.com/repository/content/repositories/releases/com/peergreen/community/peergreen-server-was/1.0.0-M2/peergreen-server-was-1.0.0-M2.jar";
-         	//var url = "https://forge.peergreen.com/repository/content/repositories/releases/com/peergreen/community/peergreen-server-light/1.0.0-M1/peergreen-server-light-1.0.0-M1.jar";
-         	var serverName = "Peergreen WAS 1.0M2";
+         
+         	var url = "https://forge.peergreen.com/repository/content/repositories/releases/com/peergreen/community/peergreen-server-was/1.0.0-M3/peergreen-server-was-1.0.0-M3.jar";
+         	var serverName = "Peergreen WAS 1.0M3";
          	var desc = "<h2>" + serverName + "</h2>";
          	desc += 'Tomcat : web container [<img src="images/osgi_logo.png" style="height:18px;display:inline-block;"/> Http service | ';
          	desc += '<img src="images/logo_java.png" style="height:18px;display:inline-block;"/> Servlet 3.0, JSP 2.2]';
@@ -246,11 +245,11 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // alias pour les clas
          	desc +="<br/>H2 : java database ";
          	desc +='<br/>Hibernate : <img src="images/logo_java.png" style="height:18px;display:inline-block;"/> persistence layer [JPA 2.0]';
          	sym.setVariable("serverName", serverName);
-
+         
             sym.setVariable("downloadURL", url);
-
+         
             //draw(sym, "was");
-         	selectProfile(sym, desc, "8,51");
+         	selectProfile(sym, desc, "8,60");
          }
 
       });
@@ -260,10 +259,9 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // alias pour les clas
          var isBusy = sym.getVariable("busy");
          if (isBusy == "false") {
          	sym.setVariable("selected", "osgi");
-
-         	var url = "https://forge.peergreen.com/repository/content/repositories/releases/com/peergreen/community/peergreen-server-osgiee/1.0.0-M2/peergreen-server-osgiee-1.0.0-M2.jar";
-         	//var url = "https://forge.peergreen.com/repository/content/repositories/releases/com/peergreen/community/peergreen-server-light/1.0.0-M1/peergreen-server-light-1.0.0-M1.jar";
-         	var serverName = "Peergreen Enterprise OSGi 1.0M2";
+         
+         	var url = "https://forge.peergreen.com/repository/content/repositories/releases/com/peergreen/community/peergreen-server-osgiee/1.0.0-M3/peergreen-server-osgiee-1.0.0-M3.jar";
+         	var serverName = "Peergreen Enterprise OSGi 1.0M3";
          	var desc = "<h3>" + serverName + "</h3>";
          	desc += 'Tomcat : web container [<img src="images/osgi_logo.png" style="height:18px;display:inline-block;"/> Http service | ';
          	desc += '<img src="images/logo_java.png" style="height:18px;display:inline-block;"/> Servlet 3.0, JSP 2.2]';
@@ -273,11 +271,11 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // alias pour les clas
          	desc += '<br />JNDI : Registry [<img src="images/osgi_logo.png" style="height:18px;display:inline-block;"/>Enterprise OSGi JNDI service]';
          	desc += '<br />H2 : JDBC datasource factory [<img src="images/osgi_logo.png" style="height:18px;display:inline-block;"/> Enterprise OSGi JDBC datasource]';
          	sym.setVariable("serverName", serverName);
-
+         
             sym.setVariable("downloadURL", url);
-
+         
          	//draw(sym, "osgi");
-         	selectProfile(sym, desc, "4,90");
+         	selectProfile(sym, desc, "4,94");
          }
 
       });
@@ -352,25 +350,29 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // alias pour les clas
          sym.setVariable("first", "true");
          sym.setVariable("init", "true");
          sym.setVariable("busy", "false");
-         
+
          sym.play('play3');
          sym.stop();
-         
+
          sym.$('.button').click(function() {
          	if (sym.getVariable("busy") == "false") {
          		if (sym.getVariable("selected") != "alacarte") {
          			sym.stop();
          			draw(sym, sym.getVariable("selected"));
+         			$("#summary", window.parent.document).css('display', 'block');
+         		} else {
+         			$("#summary", window.parent.document).css('display', 'none');	
          		}
+
          		$('.profiles').removeClass('active');
          		$(this).parent().addClass('active');
          		$('.profiles').find('img').stop().animate({ opacity: 0.2 });
          		$('.profiles').find('.profile_title').css("font-weight", "normal");
          		$(this).find('img').stop().animate({ opacity: 1 });
          		$(this).find('.profile_title').css("font-weight", "bold");
-         
+
          		$('#getStarted').css("display", "none");
-         
+
          		if ($(this).attr('id') == "kernel_profile") {
          			$('#hybrid').css("display", "none");
          			$('#hybrid').css("cursor", "");
@@ -404,11 +406,11 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // alias pour les clas
          		$('.server_name', window.parent.document).append("<b>" + sym.getVariable('serverName') + "</b>");
          	}
          });
-         
+
          $('#downloadLink', window.parent.document).click(function(){
          	window.top.location = sym.getVariable("downloadURL");
          });
-         
+
          $('.profiles').hover(
          	function () {
          		$(this).find('img').stop().animate({ opacity: 1 });
@@ -436,7 +438,7 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // alias pour les clas
       Symbol.bindElementAction(compId, symbolName, "${_btnDownload}", "click", function(sym, e) {
          var selected = sym.getVariable("selected");
          if (selected == "alacarte") {
-         	window.top.location = "/About/Contact";
+         	window.top.location = "http://www.peergreen.com/About/Contact";
          } else {
          	sym.play("play");
          	sym.setVariable("busy", "true");
@@ -507,7 +509,7 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // alias pour les clas
       Symbol.bindElementAction(compId, symbolName, "${_raspberry}", "click", function(sym, e) {
          var isBusy = sym.getVariable("busy");
          if (isBusy == "false") {
-         	window.top.location = "/Blog/Running+Peergreen+Server+on+Raspberry+Pi";
+         	window.top.location = "http://www.peergreen.com/Blog/Running+Peergreen+Server+on+Raspberry+Pi";
          }
 
       });
@@ -905,6 +907,24 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // alias pour les clas
 
       Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 20250, function(sym, e) {
          // insérer le code ici
+      });
+      //Edge binding end
+
+      Symbol.bindElementAction(compId, symbolName, "${_hybrid}", "click", function(sym, e) {
+         var isBusy = sym.getVariable("busy");
+         if (isBusy == "false") {
+         	window.top.open("http://docs.peergreen.com/peergreen_server/latest/reference/xhtml-single/user-guide.xhtml#hybrid",'_blank');
+         }
+
+      });
+      //Edge binding end
+
+      Symbol.bindElementAction(compId, symbolName, "${_framework}", "click", function(sym, e) {
+         var isBusy = sym.getVariable("busy");
+         if (isBusy == "false") {
+         	window.top.open("http://docs.peergreen.com/peergreen_server/latest/reference/xhtml-single/user-guide.xhtml#osgi-framework",'_blank');
+         }
+
       });
       //Edge binding end
 

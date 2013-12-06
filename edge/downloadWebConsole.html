@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link xmlns="http://www.w3.org/1999/xhtml" href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css" />
+		<link href="css/bootstrap.css" rel="stylesheet"/>
+    	<link href="css/bootstrap%2Dresponsive.css" rel="stylesheet"/>
+    	<link href="css/doc.css" rel="stylesheet"/>
+    	<link href="css/tooltipster.css" rel="stylesheet"/>
+    	<script src="js/jquery.js" type='text/javascript' ></script>    
+		<script src='js/tooltipster.js' type='text/javascript' ></script>
+	
+		<style>
+			#box, #desc, #btnDownload, #choice, #getStarted {
+				font-family : 'Lato';
+			}
+			#btnDownload {
+				font-size : 30px;
+			}
+			.profile_title {
+				display : table;
+				height : 100%;
+				min-height : 30px;
+			}
+			.profile_title span {
+				display : table-cell;
+				vertical-align : middle;
+			}
+			
+			.tooltipster-shadow {
+				border-radius: 5px;
+				background: #fff;
+				box-shadow: 0px 0px 14px rgba(0,0,0,0.3);
+				color: #2c2c2c;
+			}
+			.tooltipster-shadow .tooltipster-content {
+				font-family: 'Arial', sans-serif;
+				font-size: 14px;
+				line-height: 16px;
+				padding: 8px 10px;
+			}
+			.text {
+				font-family : 'Lato';
+			}
+			.logo {
+				cursor:pointer;
+				height:80px;
+				
+			}
+			.line {
+				height:85px;
+				padding : 5px;
+				margin : 3px;
+				border: 1px solid #ccc;
+  				-webkit-border-radius: 6px;
+     				-moz-border-radius: 6px;
+          			border-radius: 6px;
+		  		-webkit-box-shadow: 0 1px 10px rgba(0, 0, 0., 0.1);
+     				-moz-box-shadow: 0 1px 10px rgba(0, 0, 0, 0.1);
+          			box-shadow: 0 1px 10px rgba(0, 0, 0, 0.1);
+		  		-webkit-background-clip: padding-box;
+     				-moz-background-clip: padding;
+          			background-clip: padding-box;
+			}	
+			.firstLine {
+				width : 150px;
+			}
+			.title {
+				font-size : 20px;
+				position:relative;
+				top: 40%;
+				margin-top: -4px;
+			}
+		</style>
+		
+	<script>
+		jQuery(function($) {
+			$('#tags>div').tooltipster({
+				animation: 'grow',
+				position: 'right',
+				theme : '.tooltipster-shadow'
+			});
+		})(jQuery);
+	</script>	
+	<!--Adobe Edge Runtime-->
+    <script type="text/javascript" charset="utf-8" src="downloadWebConsole_edgePreload.js"></script>
+    <style>
+        .edgeLoad-EDGE-98299582 { visibility:hidden; }
+        img { display: block; }
+    </style>
+<!--Adobe Edge Runtime End-->
+
+</head>
+	
+	<body style="width:800px">
+	<div class="container-fluid">
+ 		<div class="row-fluid">
+  			<div class="span5 bs-docs-sidebar">
+				<h3 id="choice">Choose an assembly</h3>
+   				<ul id="profiles_menu" class="nav nav-list bs-docs-sidenav" style="width:100%">
+     				<li class="profiles"><a id="pcps_profile" class="button" style="cursor:pointer"><div class="row-fluid"><div class="profile_title"><span>Peergreen Control Point Server</span></div></div></a></li>
+     				<li class="profiles"><a id="pccc_profile" class="button" style="cursor:pointer"><div class="row-fluid"><div class="profile_title"><span>Peergreen Control Center Console</span></div></div></a></li>
+     				<li class="profiles"><a id="kernel_profile" class="button" style="cursor:pointer"><div class="row-fluid"><div class="profile_title"><span>Peergreen Console Kernel</span></div></div></a></li>
+     				<li class="profiles"><a id="pcs_profile" class="button" style="cursor:pointer"><div class="row-fluid"><div class="profile_title"><span>Peergreen Console Server</span></div></div></a></li>
+   				</ul>
+  			</div>
+  			<div id="tags" class="span1 offset6 edgeLoad-EDGE-634258009">
+  				<br />
+  				<div id="java" class="edgeLoad-EDGE-634258009" title="Click to download Oracle JDK">
+  					<img src="images/java.png" style="width:48px; padding-top:15px" class="edgeLoad-EDGE-98299582"/>
+	  				<span>Requires <br/>Java SE7</span>
+	  			</div>
+	  			<div id="vaadin" title="Learn more about Vaadin">
+  					<img src="images/vaadin-logo.png" style="width:48px; padding-top:10px" class="edgeLoad-EDGE-98299582"/>
+	  				<span>Vaadin7 <br />based</span>
+	  			</div>
+  			</div>
+  		</div>
+  	</div>
+  	
+  	<div class="container-fluid edgeLoad-EDGE-634258009" style="padding-top:100px">
+  		<div class="row-fluid">
+  			<div id="infos" class="alert alert-info span7 offset5" style="min-height:80px">
+  				<h4 id="i_txt" style="font-family:'Lato'; margin-top:20px;">Fly over a petal for information</h4>
+  				<img id="i_pck" src="images/i_pck.png" style="height:48px; padding-top:10px; display:none"/>
+  				<img id= "i_pccc" src="images/i_pccc.png" style="height:48px; padding-top:10px; display:none" />
+  				<img id ="i_tomcat" src="images/i_tomcat.png" style="height:48px; padding-top:10px; display:none"/>
+  				<img id ="i_kernel" src="images/i_kernel.png" style="height:48px; padding-top:10px; display:none"/>
+	  		</div>
+  		</div>
+  		<div class="well" style="min-height:160px">
+  			<div class="row-fluid">
+  				<div id="desc" class="span10" style="padding-left:10px">
+  				</div>
+  				<div id="btnDownload" class="span2 edgeLoad-EDGE-634258009" style="opacity:0.6">
+  					<div id="imgDownload"><!--<span style="font-size:12px">2) Click to download</span><br/>--><img src="images/download_cloud.png" style="padding-bottom:20px;padding-top:20px;width:100px" class="edgeLoad-EDGE-98299582"/></div>
+  					<div id="textDownload" class="row-fluid">
+  						<div id="size" class="span7"></div>
+  						<div class="span5">MB</div>
+  					</div>
+  				</div>
+  			</div>
+  		</div>	
+  		
+  	</div>
+  	</body>
+</html>
+
+  		
+		
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

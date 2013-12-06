@@ -7,26 +7,8 @@
    \"timelines\": {\
       \"Default Timeline\": {\
             \"ElementKeyframes\": {\
-                \"${_bigLeafCopy3}\": [], \
-                \"${_p_jotm_info}\": [], \
-                \"${_bigLeafCopy7}\": [], \
-                \"${_bigLeafCopy4}\": [], \
-                \"${_p_hibernate_info}\": [], \
-                \"${_p_tomcat_info}\": [], \
-                \"${_Daisy}\": [], \
-                \"${_bigLeaf}\": [], \
-                \"${_bigLeafCopy2}\": [], \
-                \"${_p_aries_info}\": [], \
-                \"${_p_jersey_info}\": [], \
-                \"${_kernel}\": [], \
-                \"${_bigLeafCopy5}\": [], \
-                \"${_p_jndi_info}\": [], \
-                \"${_p_h2_info}\": [], \
-                \"${_p_easybeans_info}\": [], \
                 \"${_p_aries}\": [], \
-                \"${_margarita}\": [], \
-                \"${_bigLeafCopy}\": [], \
-                \"${_bigLeafCopy6}\": []\
+                \"${_Daisy}\": []\
             }\
       }\
    }},\
@@ -40,23 +22,19 @@
    }}\
 }",
 	"pref__general__codeView":"sectionalView",
-	"pixelsPerMs":"0.041177181898063",
-	"viewStartY":"0",
+	"PreloaderType":"Polite",
+	"pref__general__TimelineShowGrid":"true",
 	"Niveau inférieur-Default Timeline_playhead_ms":"0",
 	"pref__general__AutoKeyframePropertiesArmed":"false",
-	"stage-Default Timeline_mark_ms":"-1",
+	"usedBOM":"false",
 	"symbol_stage":{
 		"element_${_textInLeaf}":{
 			"animationEnabled":"false"},
 		"dummyStageParentWidth":"1333px",
 		"element_${_step1Copy}":{
 			"animationEnabled":"false"},
-		"element_${_tige}":{
-			"animationEnabled":"false"},
-		"element_${_product_box}":{
-			"animationEnabled":"false"},
-		"element_${_profiles_menu}":{
-			"epOpened":"true"},
+		"element_${_p_jotm}":{
+			"invisible":"false"},
 		"element_${_p_jdbc}":{
 			"timelineColor2":"0x81aa62",
 			"invisible":"false",
@@ -65,13 +43,8 @@
 			"timelineColor3":"0x5b6c4d"},
 		"element_${_p_easybeans}":{
 			"invisible":"false"},
-		"element_${_Daisy}":{
-			"timelineColor2":"0xcbbd71",
-			"timelineColor3":"0x7b7652",
-			"timelineColor":"0xeedf79",
-			"timelineTreeOpened":"true",
-			"animationEnabled":"true",
-			"invisible":"false"},
+		"element_${_tige}":{
+			"animationEnabled":"false"},
 		"element_${_p_jersey}":{
 			"invisible":"false"},
 		"element_${_Rectangle}":{
@@ -88,13 +61,17 @@
 			"timelineTreeOpened":"true",
 			"animationEnabled":"false",
 			"timelineColor3":"0x385063"},
-		"element_${_p_jotm}":{
+		"element_${_Daisy}":{
+			"timelineColor2":"0xcbbd71",
+			"timelineColor3":"0x7b7652",
+			"timelineColor":"0xeedf79",
+			"timelineTreeOpened":"true",
+			"animationEnabled":"true",
 			"invisible":"false"},
 		"element_${_p_jndi}":{
 			"invisible":"false"},
-		"element_${_choice}":{
-			"locked":"false",
-			"invisible":"false"},
+		"element_${_product_box}":{
+			"animationEnabled":"false"},
 		"element_${_p_h2}":{
 			"invisible":"false"},
 		"element_${_download}":{
@@ -111,29 +88,34 @@
 			"timelineColor":"0x00a9fa",
 			"animationEnabled":"true",
 			"timelineColor3":"0x29647e"},
+		"element_${_choice}":{
+			"locked":"false",
+			"invisible":"false"},
 		"codeTreeElementPopupFilter":"",
+		"element_${_profiles_menu}":{
+			"epOpened":"true"},
+		"element_${_p_hibernate}":{
+			"invisible":"false"},
+		"element_${_profile_desc}":{
+			"animationEnabled":"false"},
 		"element_${_btnDownload}":{
 			"timelineColor2":"0x4fa275",
 			"animationEnabled":"false",
 			"timelineColor3":"0x456a55",
-			"timelineColor":"0x50bd82"},
-		"element_${_p_hibernate}":{
-			"invisible":"false"},
-		"element_${_profile_desc}":{
-			"animationEnabled":"false"}},
-	"TransitionIdCounter":"8445",
+			"timelineColor":"0x50bd82"}},
+	"TransitionIdCounter":"8957",
 	"CompZoomFactor":"100",
 	"StageZoomFactor":"100",
 	"colorSwatches":"rgba(192,192,192,0.00)",
-	"pref__general__GenerateSmoothTransitions":"true",
-	"nextElementColorIndex":"8",
-	"usedBOM":"false",
+	"stage-Default Timeline_playhead_ms":"20250",
 	"ShowRulers":"true",
-	"pref__general__TimelineShowGrid":"true",
+	"stage-Default Timeline_mark_ms":"-1",
+	"nextElementColorIndex":"8",
+	"pref__general__GenerateSmoothTransitions":"true",
 	"symbol_Niveau inférieur":{
 		"defaultStageParentWidth":"850px",
 		"defaultStageParentHeight":"583px",
 		"dummyStageParentWidth":"1374px",
 		"dummyStageParentHeight":"528px"},
-	"PreloaderType":"Polite",
-	"stage-Default Timeline_playhead_ms":"20250"}
+	"viewStartY":"0",
+	"pixelsPerMs":"0.041177181898063"}

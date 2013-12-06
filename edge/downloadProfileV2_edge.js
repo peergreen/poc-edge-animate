@@ -202,56 +202,48 @@ var symbols = {
                id:'p_tomcat_info',
                type:'image',
                rect:['36.4%','75.2%','202px','88px','auto','auto'],
-               opacity:0,
                fill:["rgba(0,0,0,0)",im+"p_tomcat_info.png",'0px','0px']
             },
             {
                id:'p_jotm_info',
                type:'image',
                rect:['36.6%','75.1%','202px','88px','auto','auto'],
-               opacity:0,
                fill:["rgba(0,0,0,0)",im+"p_jotm_info.png",'0px','0px']
             },
             {
                id:'p_jndi_info',
                type:'image',
                rect:['36.6%','74.8%','202px','88px','auto','auto'],
-               opacity:0,
                fill:["rgba(0,0,0,0)",im+"p_jndi_info.png",'0px','0px']
             },
             {
                id:'p_hibernate_info',
                type:'image',
                rect:['36.6%','74.8%','202px','88px','auto','auto'],
-               opacity:0,
                fill:["rgba(0,0,0,0)",im+"p_hibernate_info.png",'0px','0px']
             },
             {
                id:'p_jersey_info',
                type:'image',
                rect:['36.6%','74.8%','202px','88px','auto','auto'],
-               opacity:0,
                fill:["rgba(0,0,0,0)",im+"p_jersey_info.png",'0px','0px']
             },
             {
                id:'p_easybeans_info',
                type:'image',
                rect:['36.6%','74.8%','202px','88px','auto','auto'],
-               opacity:0,
                fill:["rgba(0,0,0,0)",im+"p_easybeans_info.png",'0px','0px']
             },
             {
                id:'p_h2_info',
                type:'image',
                rect:['36.1%','74.9%','202px','88px','auto','auto'],
-               opacity:0,
                fill:["rgba(0,0,0,0)",im+"p_h2_info.png",'0px','0px']
             },
             {
                id:'p_aries_info',
                type:'image',
                rect:['36.1%','74.9%','202px','88px','auto','auto'],
-               opacity:0,
                fill:["rgba(0,0,0,0)",im+"p_aries_info.png",'0px','0px']
             }]
          },
@@ -282,11 +274,11 @@ var symbols = {
          ],
          "${_p_jotm_info}": [
             ["style", "top", '75.14%'],
-            ["style", "overflow", 'visible'],
-            ["style", "right", 'auto'],
             ["style", "bottom", 'auto'],
-            ["style", "height", '88px'],
             ["style", "opacity", '0'],
+            ["style", "overflow", 'visible'],
+            ["style", "height", '88px'],
+            ["style", "right", 'auto'],
             ["style", "left", '36.61%'],
             ["style", "width", '202px']
          ],
@@ -313,21 +305,28 @@ var symbols = {
          ],
          "${_p_easybeans_info}": [
             ["style", "top", '74.84%'],
-            ["style", "bottom", 'auto'],
-            ["style", "opacity", '0'],
             ["style", "overflow", 'visible'],
-            ["style", "height", '88px'],
             ["style", "right", 'auto'],
+            ["style", "bottom", 'auto'],
+            ["style", "height", '88px'],
+            ["style", "opacity", '0'],
             ["style", "left", '36.59%'],
             ["style", "width", '202px']
          ],
          "${_jersey_mouseover}": [
             ["style", "top", '213px'],
-            ["style", "cursor", 'help'],
+            ["style", "left", '104px'],
             ["style", "height", '50px'],
             ["style", "opacity", '0'],
-            ["style", "left", '104px'],
+            ["style", "cursor", 'help'],
             ["style", "width", '59px']
+         ],
+         "${_p_tomcat}": [
+            ["style", "top", '-12px'],
+            ["style", "overflow", 'visible'],
+            ["style", "height", '150px'],
+            ["style", "left", '81px'],
+            ["style", "width", '118px']
          ],
          "${_margarita}": [
             ["style", "top", '24px']
@@ -349,24 +348,24 @@ var symbols = {
          ],
          "${_p_h2_info}": [
             ["style", "top", '74.94%'],
-            ["style", "overflow", 'visible'],
-            ["style", "right", 'auto'],
             ["style", "bottom", 'auto'],
-            ["style", "height", '88px'],
             ["style", "opacity", '0'],
+            ["style", "overflow", 'visible'],
+            ["style", "height", '88px'],
+            ["style", "right", 'auto'],
             ["style", "left", '36.06%'],
             ["style", "width", '202px']
          ],
          "${_p_jotm}": [
-            ["style", "height", '135px'],
             ["style", "top", '10px'],
+            ["style", "height", '135px'],
             ["style", "left", '132px'],
             ["style", "width", '138px']
          ],
          "${_smallLeaf}": [
             ["style", "top", '78.23%'],
-            ["style", "overflow", 'visible'],
             ["style", "bottom", 'auto'],
+            ["style", "overflow", 'visible'],
             ["style", "height", '23px'],
             ["style", "right", 'auto'],
             ["style", "left", '35.83%'],
@@ -374,10 +373,10 @@ var symbols = {
          ],
          "${_hibernate_mouseover}": [
             ["style", "top", '179px'],
-            ["style", "cursor", 'help'],
+            ["style", "left", '175px'],
             ["style", "height", '54px'],
             ["style", "opacity", '0'],
-            ["style", "left", '175px'],
+            ["style", "cursor", 'help'],
             ["style", "width", '53px']
          ],
          "${_step3}": [
@@ -389,83 +388,81 @@ var symbols = {
             ["style", "width", '121px']
          ],
          "${_p_jersey}": [
-            ["style", "height", '150px'],
             ["style", "top", '141px'],
+            ["style", "height", '150px'],
             ["style", "left", '79px'],
             ["style", "width", '110px']
          ],
          "${_p_hibernate_info}": [
             ["style", "top", '74.84%'],
-            ["style", "bottom", 'auto'],
-            ["style", "opacity", '0'],
             ["style", "overflow", 'visible'],
-            ["style", "height", '88px'],
             ["style", "right", 'auto'],
+            ["style", "bottom", 'auto'],
+            ["style", "height", '88px'],
+            ["style", "opacity", '0'],
             ["style", "left", '36.59%'],
             ["style", "width", '202px']
          ],
          "${_p_tomcat_info}": [
             ["style", "top", '75.19%'],
-            ["style", "bottom", 'auto'],
-            ["style", "opacity", '0'],
             ["style", "overflow", 'visible'],
-            ["style", "height", '88px'],
             ["style", "right", 'auto'],
+            ["style", "bottom", 'auto'],
+            ["style", "height", '88px'],
+            ["style", "opacity", '0'],
             ["style", "left", '36.4%'],
             ["style", "width", '202px']
          ],
          "${_Daisy}": [
             ["style", "top", '0.74%'],
-            ["transform", "scaleX", '1'],
-            ["transform", "scaleY", '1'],
-            ["transform", "rotateZ", '720deg'],
-            ["style", "display", 'block'],
-            ["style", "right", '-4.35%'],
-            ["style", "left", 'auto'],
             ["style", "-webkit-transform-origin", [50,50], {valueTemplate:'@@0@@% @@1@@%'} ],
             ["style", "-moz-transform-origin", [50,50],{valueTemplate:'@@0@@% @@1@@%'}],
             ["style", "-ms-transform-origin", [50,50],{valueTemplate:'@@0@@% @@1@@%'}],
             ["style", "msTransformOrigin", [50,50],{valueTemplate:'@@0@@% @@1@@%'}],
-            ["style", "-o-transform-origin", [50,50],{valueTemplate:'@@0@@% @@1@@%'}]
-         ],
-         "${_p_aries_info}": [
-            ["style", "top", '74.94%'],
-            ["style", "overflow", 'visible'],
-            ["style", "right", 'auto'],
-            ["style", "bottom", 'auto'],
-            ["style", "height", '88px'],
-            ["style", "opacity", '0'],
-            ["style", "left", '36.06%'],
-            ["style", "width", '202px']
+            ["style", "-o-transform-origin", [50,50],{valueTemplate:'@@0@@% @@1@@%'}],
+            ["transform", "scaleY", '1'],
+            ["transform", "rotateZ", '720deg'],
+            ["transform", "scaleX", '1'],
+            ["style", "right", '-4.35%'],
+            ["style", "left", 'auto'],
+            ["style", "display", 'block']
          ],
          "${_java}": [
             ["style", "cursor", 'pointer']
          ],
-         "${_p_jersey_info}": [
-            ["style", "top", '74.84%'],
-            ["style", "bottom", 'auto'],
-            ["style", "opacity", '0'],
-            ["style", "overflow", 'visible'],
-            ["style", "height", '88px'],
-            ["style", "right", 'auto'],
-            ["style", "left", '36.59%'],
-            ["style", "width", '202px']
-         ],
          "${_p_hibernate}": [
-            ["style", "height", '138px'],
             ["style", "top", '134px'],
+            ["style", "height", '138px'],
             ["style", "left", '131px'],
             ["style", "width", '135px']
          ],
          "${_step2}": [
             ["style", "top", 'auto'],
-            ["style", "bottom", '28.25%'],
-            ["style", "right", '7.5%'],
             ["style", "overflow", 'visible'],
-            ["style", "height", '57px'],
             ["style", "opacity", '0'],
+            ["style", "bottom", '28.25%'],
+            ["style", "height", '57px'],
+            ["style", "right", '7.5%'],
             ["style", "left", 'auto'],
             ["style", "width", '96px']
+         ],
+         "${_jndi_mouseover}": [
+            ["style", "top", '115px'],
+            ["style", "left", '201px'],
+            ["style", "height", '50px'],
+            ["style", "opacity", '0'],
+            ["style", "cursor", 'help'],
+            ["style", "width", '60px']
+         ],
+         "${_p_jersey_info}": [
+            ["style", "top", '74.84%'],
+            ["style", "overflow", 'visible'],
+            ["style", "right", 'auto'],
+            ["style", "bottom", 'auto'],
+            ["style", "height", '88px'],
+            ["style", "opacity", '0'],
+            ["style", "left", '36.59%'],
+            ["style", "width", '202px']
          ],
          "${_p_aries}": [
             ["style", "top", '6px'],
@@ -474,89 +471,84 @@ var symbols = {
             ["style", "left", '7px'],
             ["style", "width", '135px']
          ],
-         "${_jndi_mouseover}": [
-            ["style", "top", '115px'],
-            ["style", "cursor", 'help'],
-            ["style", "height", '50px'],
+         "${_h2_mouseover}": [
+            ["style", "top", '107px'],
+            ["style", "left", '8px'],
+            ["style", "height", '62px'],
             ["style", "opacity", '0'],
-            ["style", "left", '201px'],
-            ["style", "width", '60px']
-         ],
-         "${_p_h2}": [
-            ["style", "height", '110px'],
-            ["style", "top", '80px'],
-            ["style", "left", '-14px'],
-            ["style", "width", '150px']
+            ["style", "cursor", 'help'],
+            ["style", "width", '67px']
          ],
          "${_aries_mouseover}": [
             ["style", "top", '45px'],
-            ["style", "cursor", 'help'],
+            ["style", "left", '36px'],
             ["style", "height", '49px'],
             ["style", "opacity", '0'],
-            ["style", "left", '36px'],
+            ["style", "cursor", 'help'],
             ["style", "width", '59px']
-         ],
-         "${_tomcat_mouseover}": [
-            ["style", "top", '11px'],
-            ["style", "cursor", 'help'],
-            ["style", "height", '56px'],
-            ["style", "opacity", '0'],
-            ["style", "left", '114px'],
-            ["style", "width", '60px']
-         ],
-         "${_easybeans_mouseover}": [
-            ["style", "top", '181px'],
-            ["style", "cursor", 'help'],
-            ["style", "height", '50px'],
-            ["style", "opacity", '0'],
-            ["style", "left", '37px'],
-            ["style", "width", '58px']
          ],
          "${_step1}": [
             ["style", "top", '2.15%'],
-            ["style", "bottom", 'auto'],
             ["style", "overflow", 'visible'],
+            ["style", "bottom", 'auto'],
             ["style", "height", '57px'],
             ["style", "right", 'auto'],
             ["style", "left", '30.4%'],
             ["style", "width", '87px']
          ],
-         "${_jotm_mouseover}": [
-            ["style", "top", '45px'],
-            ["style", "cursor", 'help'],
-            ["style", "height", '54px'],
+         "${_easybeans_mouseover}": [
+            ["style", "top", '181px'],
+            ["style", "left", '37px'],
+            ["style", "height", '50px'],
             ["style", "opacity", '0'],
-            ["style", "left", '180px'],
-            ["style", "width", '60px']
+            ["style", "cursor", 'help'],
+            ["style", "width", '58px']
          ],
          "${_p_easybeans}": [
-            ["style", "height", '135px'],
             ["style", "top", '132px'],
+            ["style", "height", '135px'],
             ["style", "left", '5px'],
             ["style", "width", '138px']
          ],
-         "${_p_tomcat}": [
-            ["style", "top", '-12px'],
-            ["style", "overflow", 'visible'],
-            ["style", "height", '150px'],
-            ["style", "left", '81px'],
-            ["style", "width", '118px']
-         ],
-         "${_h2_mouseover}": [
-            ["style", "top", '107px'],
-            ["style", "cursor", 'help'],
-            ["style", "height", '62px'],
+         "${_jotm_mouseover}": [
+            ["style", "top", '45px'],
+            ["style", "left", '180px'],
+            ["style", "height", '54px'],
             ["style", "opacity", '0'],
-            ["style", "left", '8px'],
-            ["style", "width", '67px']
+            ["style", "cursor", 'help'],
+            ["style", "width", '60px']
          ],
-         "${_p_jndi_info}": [
-            ["style", "top", '74.84%'],
+         "${_p_aries_info}": [
+            ["style", "top", '74.94%'],
             ["style", "bottom", 'auto'],
             ["style", "opacity", '0'],
             ["style", "overflow", 'visible'],
             ["style", "height", '88px'],
             ["style", "right", 'auto'],
+            ["style", "left", '36.06%'],
+            ["style", "width", '202px']
+         ],
+         "${_p_h2}": [
+            ["style", "top", '80px'],
+            ["style", "height", '110px'],
+            ["style", "left", '-14px'],
+            ["style", "width", '150px']
+         ],
+         "${_tomcat_mouseover}": [
+            ["style", "top", '11px'],
+            ["style", "left", '114px'],
+            ["style", "height", '56px'],
+            ["style", "opacity", '0'],
+            ["style", "cursor", 'help'],
+            ["style", "width", '60px']
+         ],
+         "${_p_jndi_info}": [
+            ["style", "top", '74.84%'],
+            ["style", "overflow", 'visible'],
+            ["style", "right", 'auto'],
+            ["style", "bottom", 'auto'],
+            ["style", "height", '88px'],
+            ["style", "opacity", '0'],
             ["style", "left", '36.59%'],
             ["style", "width", '202px']
          ]
@@ -575,25 +567,25 @@ var symbols = {
             "play3": 20250
          },
          timeline: [
-            { id: "eid1557", tween: [ "style", "${_Daisy}", "right", '0%', { fromValue: '-4.35%'}], position: 2086, duration: 229 },
+            { id: "eid1556", tween: [ "style", "${_Daisy}", "top", '0%', { fromValue: '0.74%'}], position: 2086, duration: 229 },
             { id: "eid1", tween: [ "style", "${_Daisy}", "display", 'block', { fromValue: 'block'}], position: 0, duration: 0 },
             { id: "eid4449", tween: [ "style", "${_p_aries}", "height", '139px', { fromValue: '139px'}], position: 19500, duration: 0 },
             { id: "eid10", tween: [ "style", "${_Daisy}", "-webkit-transform-origin", [50,50], { valueTemplate: '@@0@@% @@1@@%', fromValue: [50,50]}], position: 0, duration: 0 },
-            { id: "eid8445", tween: [ "style", "${_Daisy}", "-moz-transform-origin", [50,50], { valueTemplate: '@@0@@% @@1@@%', fromValue: [50,50]}], position: 0, duration: 0 },
-            { id: "eid8446", tween: [ "style", "${_Daisy}", "-ms-transform-origin", [50,50], { valueTemplate: '@@0@@% @@1@@%', fromValue: [50,50]}], position: 0, duration: 0 },
-            { id: "eid8447", tween: [ "style", "${_Daisy}", "msTransformOrigin", [50,50], { valueTemplate: '@@0@@% @@1@@%', fromValue: [50,50]}], position: 0, duration: 0 },
-            { id: "eid8448", tween: [ "style", "${_Daisy}", "-o-transform-origin", [50,50], { valueTemplate: '@@0@@% @@1@@%', fromValue: [50,50]}], position: 0, duration: 0 },
+            { id: "eid8957", tween: [ "style", "${_Daisy}", "-moz-transform-origin", [50,50], { valueTemplate: '@@0@@% @@1@@%', fromValue: [50,50]}], position: 0, duration: 0 },
+            { id: "eid8958", tween: [ "style", "${_Daisy}", "-ms-transform-origin", [50,50], { valueTemplate: '@@0@@% @@1@@%', fromValue: [50,50]}], position: 0, duration: 0 },
+            { id: "eid8959", tween: [ "style", "${_Daisy}", "msTransformOrigin", [50,50], { valueTemplate: '@@0@@% @@1@@%', fromValue: [50,50]}], position: 0, duration: 0 },
+            { id: "eid8960", tween: [ "style", "${_Daisy}", "-o-transform-origin", [50,50], { valueTemplate: '@@0@@% @@1@@%', fromValue: [50,50]}], position: 0, duration: 0 },
             { id: "eid3005", tween: [ "style", "${_Daisy}", "-webkit-transform-origin", [50,50], { valueTemplate: '@@0@@% @@1@@%', fromValue: [50,50]}], position: 1500, duration: 0 },
-            { id: "eid8449", tween: [ "style", "${_Daisy}", "-moz-transform-origin", [50,50], { valueTemplate: '@@0@@% @@1@@%', fromValue: [50,50]}], position: 1500, duration: 0 },
-            { id: "eid8450", tween: [ "style", "${_Daisy}", "-ms-transform-origin", [50,50], { valueTemplate: '@@0@@% @@1@@%', fromValue: [50,50]}], position: 1500, duration: 0 },
-            { id: "eid8451", tween: [ "style", "${_Daisy}", "msTransformOrigin", [50,50], { valueTemplate: '@@0@@% @@1@@%', fromValue: [50,50]}], position: 1500, duration: 0 },
-            { id: "eid8452", tween: [ "style", "${_Daisy}", "-o-transform-origin", [50,50], { valueTemplate: '@@0@@% @@1@@%', fromValue: [50,50]}], position: 1500, duration: 0 },
+            { id: "eid8961", tween: [ "style", "${_Daisy}", "-moz-transform-origin", [50,50], { valueTemplate: '@@0@@% @@1@@%', fromValue: [50,50]}], position: 1500, duration: 0 },
+            { id: "eid8962", tween: [ "style", "${_Daisy}", "-ms-transform-origin", [50,50], { valueTemplate: '@@0@@% @@1@@%', fromValue: [50,50]}], position: 1500, duration: 0 },
+            { id: "eid8963", tween: [ "style", "${_Daisy}", "msTransformOrigin", [50,50], { valueTemplate: '@@0@@% @@1@@%', fromValue: [50,50]}], position: 1500, duration: 0 },
+            { id: "eid8964", tween: [ "style", "${_Daisy}", "-o-transform-origin", [50,50], { valueTemplate: '@@0@@% @@1@@%', fromValue: [50,50]}], position: 1500, duration: 0 },
             { id: "eid4529", tween: [ "style", "${_p_aries}", "left", '7px', { fromValue: '7px'}], position: 19500, duration: 0 },
-            { id: "eid1556", tween: [ "style", "${_Daisy}", "top", '0%', { fromValue: '0.74%'}], position: 2086, duration: 229 },
+            { id: "eid88", tween: [ "transform", "${_Daisy}", "rotateZ", '720deg', { fromValue: '720deg'}], position: 0, duration: 0 },
+            { id: "eid6443", tween: [ "transform", "${_Daisy}", "rotateZ", '720deg', { fromValue: '360deg'}], position: 149, duration: 851 },
             { id: "eid4528", tween: [ "style", "${_p_aries}", "top", '6px', { fromValue: '6px'}], position: 19500, duration: 0 },
             { id: "eid4445", tween: [ "style", "${_p_aries}", "width", '135px', { fromValue: '135px'}], position: 19500, duration: 0 },
-            { id: "eid88", tween: [ "transform", "${_Daisy}", "rotateZ", '720deg', { fromValue: '720deg'}], position: 0, duration: 0 },
-            { id: "eid6443", tween: [ "transform", "${_Daisy}", "rotateZ", '720deg', { fromValue: '360deg'}], position: 149, duration: 851 }         ]
+            { id: "eid1557", tween: [ "style", "${_Daisy}", "right", '0%', { fromValue: '-4.35%'}], position: 2086, duration: 229 }         ]
       }
    }
 }
